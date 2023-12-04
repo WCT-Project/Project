@@ -19,9 +19,9 @@
                         |<---Color Code For Use--->|
                         |--------------------------|
                 
-                --->    Black:                     #1D231F
-                        White with Less Gray:      #F0F0F0
-                        Gray:                      #B3B3B3
+                --->    Background Nav Box:             #ffffff
+                        Border Color:                   #cccccc   
+                        Background Body Color:          #f7f7f7  
 
 
 

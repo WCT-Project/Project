@@ -1,0 +1,180 @@
+body
+{
+    background-color: #F7F7F7;
+    
+}
+span
+{
+    color: #1A1A1A;
+    font-family: 'Albertus Medium', sans-serif;
+}
+.nav-first
+{
+    border: solid 2px #d3d3d3;
+    border-radius: 0.6em;
+    margin: 1em;
+    padding: 0.6em;
+    border-style: dashed;
+    border-width: 2px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+}
+
+
+.login-register
+{
+    background-color: rgb(26, 26, 26);
+    color: #FFFFFF;
+    padding: 0.5em 1em 0.5em 1em;
+    border-radius: 0.3em;
+}
+
+.budget-analysis
+{
+    border: solid 1px #1A1A1A;
+    padding: 0.5em 1em 0.5em 1em;
+    border-radius: 2em;
+}
+
+img
+{
+    width: 2em;
+    height: 2em;
+}
+
+.nav-first h6
+{
+    font-size: 15px;
+    padding-bottom: 0;
+}
+
+.Caption-Budget-Analysis
+{
+    padding-top: 0.8em;
+    display: flex;
+    justify-content: center;
+    font-family: 'Albertus Medium', sans-serif;
+    font-size: 30px;
+}
+
+.nest-input-budget-analysis
+{
+    display: flex;
+}
+
+.logo
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
+}
+.input-box
+{
+    border: solid 2px #B3B3B3;
+    margin-right: 10%;
+    margin-left: 10%;
+    border-style: dashed;
+    border-radius: 10px;
+    margin-top: 3%;
+    background-color: #FBFBFB;
+}
+
+
+
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --default-color: hsl(200, 4%, 60%);
+  --active-color: hsl(200, 70%, 56%);
+  --border-color: hsl(200, 4%, 64%);
+  --text-color: hsl(200, 4%, 24%);
+  --body-color: #FFFFFF;
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Albertus Medium", sans-serif;
+  --normal-font-size: 1rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+}
+
+body,
+input {
+  font-size: var(--normal-font-size);
+  font-family: var(--body-font);
+  color: var(--text-color);
+}
+
+/*=============== INPUT FIELD ===============*/
+.container {
+  height: 15vh;
+  display: grid;
+  place-items: center;
+}
+
+.form {
+  width: 100%;
+  max-width: 340px;
+  min-width: 128px;
+}
+
+.form__field {
+  position: relative;
+}
+
+.form__input {
+  width: 100%;
+  border: 3px solid var(--default-color);
+  padding: 1.4rem 1.4rem 1.4rem 4.5rem;
+  border-radius: 1rem;
+  outline: none;
+  font-weight: 500;
+  transition: border-color .4s, box-shadow .4s;
+}
+
+.form__input::placeholder {
+  color: var(--text-color);
+}
+
+.form__label {
+  position: absolute;
+  left: 1.5rem;
+  top: -.65rem;
+  background-color: #FBFBFB;
+  padding: 2px;
+  font-size: var(--small-font-size);
+  font-weight: 500;
+}
+
+.form__icon {
+  height: max-content;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 1.5rem;
+  top: 0;
+  bottom: 0;
+  margin-block: auto;
+}
+
+.form__field::after {
+  content: "";
+  position: absolute;
+  height: 28px;
+  border: 1px solid var(--border-color);
+  left: 3.75rem;
+  top: 0;
+  bottom: 0;
+  margin-block: auto;
+}
+
+/* Active focus & valid field color */
+.form__input:focus,
+.valid .form__input
+{
+  border-color: var(--active-color);
+  box-shadow: 0 8px 24px hsla(200, 70%, 56%, .3);
+}
