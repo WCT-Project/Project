@@ -19,9 +19,12 @@
                         |<---Color Code For Use--->|
                         |--------------------------|
                 
-                --->    Background Nav Box:             #ffffff
+                --->    Color Text Nav:                 #1a1a1a
+                        Color Text Login:               #fdfdfd
                         Border Color:                   #cccccc   
                         Background Body Color:          #f7f7f7  
+                        Background of nav list:         #1a1a1a
+                        Background Nav Box:             #ffffff                        
 
 
 

@@ -9,11 +9,215 @@
 {
     background-color: #f7f7f7;
 }
+
 .border-header
 {
     border: solid 2px #cccccc;
-    border-radius: 5px;
+    border-radius: 10px;
     border-style: dashed;
     margin: 1em;
     background-color: #ffffff;
+}
+.nav-LOGIN-REGISTER
+{
+    background-color: #1a1a1a;
+    border-radius: 6px;
+}
+.nav-item > .nav-link > .login
+{
+    color: #fdfdfd;
+}
+.nav-item > .nav-link > span
+{
+    color: #1a1a1a;
+}
+.navbar-nav
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div > ul
+{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+}
+.navbar-collapse > ul > li
+{
+    display:block;
+    justify-content: center;
+}
+.collapse > ul > li
+{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+header
+{
+    overflow:scroll;
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    width: 100%;
+}
+.main-caption
+{
+    margin-top: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Budget-Analysis
+{
+    border: solid 2px #202020;
+    border-radius: 25px;
+    padding: 3px 9px;
+}
+
+/* =============>Input Value<============= */
+.input-box
+{
+    border: solid 2px #B3B3B3;
+    border-style: dashed;
+    border-radius: 10px;
+    margin: 1em;
+    padding-bottom: 1em;
+    background-color: #FBFBFB;
+}
+.after-input-box
+{
+    display: flex;
+    flex-direction: row;
+    margin: 5px 5px 5px 5px;
+    justify-content: space-around;
+    align-items: center;
+}
+.nest-input-budget-analysis
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.analysis
+{
+    padding: 9px;
+    border-radius: 9px;
+    background-color: #1a1a1a;
+    color: #fdfdfd;
+}
+.container {
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form__label
+{
+    position: absolute;
+    left: 1.5rem;
+    top: -.65rem;
+    background-color: #FBFBFB;
+    padding: 2px;
+    font-size: 10px;
+}
+.form__field 
+{
+    z-index: 0;
+    position: relative;
+}
+.form__input {
+    border: solid 2px #202020;
+    width: 100%;
+    border: 1px solid hsl(200, 4%, 60%);
+    margin-right: 3em;
+    padding: 0.5rem 0rem 0.9rem 0.5rem;
+    border-radius: 10px;
+}
+::placeholder
+{
+    font-size: 12px;
+}
+
+.form__input:focus,
+.valid .form__input
+{
+  border-color: hsl(200, 70%, 56%);
+  box-shadow: 0 8px 24px hsla(200, 70%, 56%, .3);
+}
+
+@media only screen and (max-width: 376px) {
+    ::placeholder
+    {
+        font-size: 9px;
+    }
+}
+
+
+/* =========================Card====================== */
+.caption-category
+{
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+.card-img-top
+{
+  width: auto;
+  height: 25vh;
+}
+.show-category
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 2em 1em 2em;
+    justify-content: space-between;
+}
+.card
+{
+    margin: 0 1em 2em 1em;
+}
+.primary
+{
+    background-color: #1a1a1a;
+    margin: 0.3em 10em 0.5em 1em;
+    border-radius: 8px;
+}
+.primary a
+{
+    color: #f7f7f7;
+}
+
+
+@media screen and (max-width: 703px) {
+    .show-category
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 379px) {
+    .primary a
+    {
+        font-size: 12px;
+    }
+    .card-text
+    {
+        font-size: 9px;
+    }
+    .card-title
+    {
+        font-size: 14px;
+    }
+    .primary
+    {
+        
+    }
+}
+@media screen and (max-width: 320px) {
+    .primary a
+    {
+        font-size: 5px;
+    }
 }
