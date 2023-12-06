@@ -3,7 +3,7 @@ import Menu from '../component/menu';
 import BudgetAnalyzer from '../component/budget_anlyzer';
 import Category from '../component/category';
 
-const BudgetAnalysis = () => {
+const Home = () => {
   return (
       <div>
           <Menu />
@@ -13,4 +13,4 @@ const BudgetAnalysis = () => {
   );
 };
 
-export default BudgetAnalysis;
+export default Home;
