@@ -1,0 +1,63 @@
+.border-header
+{
+    border: solid 2px #cccccc;
+    border-radius: 10px;
+    border-style: dashed;
+    margin: 1em;
+    background-color: #ffffff;
+}
+.nav-LOGIN-REGISTER
+{
+    background-color: #1a1a1a;
+    border-radius: 6px;
+}
+.nav-item > .nav-link > .login
+{
+    color: #fdfdfd;
+}
+.nav-item > .nav-link > span
+{
+    color: #1a1a1a;
+}
+.navbar-nav
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div > ul
+{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+}
+.navbar-collapse > ul > li
+{
+    display:block;
+    justify-content: center;
+}
+.collapse > ul > li
+{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+header 
+{
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    width: 100%;
+}
+.main-caption
+{
+    margin-top: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Budget-Analysis
+{
+    border: solid 2px #202020;
+    border-radius: 25px;
+    padding: 3px 9px;
+}
