@@ -210,10 +210,6 @@ header
     {
         font-size: 14px;
     }
-    .primary
-    {
-        
-    }
 }
 @media screen and (max-width: 320px) {
     .primary a
