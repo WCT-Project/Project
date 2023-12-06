@@ -1,0 +1,77 @@
+.input-box
+{
+    border: solid 2px #B3B3B3;
+    border-style: dashed;
+    border-radius: 10px;
+    margin: 1em;
+    padding-bottom: 1em;
+    background-color: #FBFBFB;
+}
+.after-input-box
+{
+    display: flex;
+    flex-direction: row;
+    margin: 5px 5px 5px 5px;
+    justify-content: space-around;
+    align-items: center;
+}
+.nest-input-budget-analysis
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.analysis
+{
+    padding: 9px;
+    border-radius: 9px;
+    background-color: #1a1a1a;
+    color: #fdfdfd;
+}
+.container {
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form__label
+{
+    position: absolute;
+    left: 1.5rem;
+    top: -.65rem;
+    background-color: #FBFBFB;
+    padding: 2px;
+    font-size: 10px;
+}
+.form__field 
+{
+    z-index: 0;
+    position: relative;
+}
+.form__input {
+    border: solid 2px #202020;
+    width: 100%;
+    border: 1px solid hsl(200, 4%, 60%);
+    margin-right: 3em;
+    padding: 0.5rem 0rem 0.9rem 0.5rem;
+    border-radius: 10px;
+}
+::placeholder
+{
+    font-size: 12px;
+}
+
+.form__input:focus,
+.valid .form__input
+{
+  border-color: hsl(200, 70%, 56%);
+  box-shadow: 0 8px 24px hsla(200, 70%, 56%, .3);
+}
+
+@media only screen and (max-width: 376px) {
+    ::placeholder
+    {
+        font-size: 9px;
+    }
+}

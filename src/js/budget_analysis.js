@@ -3,7 +3,9 @@ import Menu from '../component/menu';
 
 const BudgetAnalysis = () => {
   return (
-        <Menu />
+      <div>
+          <Menu />
+      </div>
   );
 };
 
