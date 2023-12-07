@@ -13,13 +13,13 @@ function show_Place_Province()
                     </div>
                     <ul class="nav nav-pills mb-4" id="pills-tab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#botton1" type="button" role="tab" aria-controls="pills-home" aria-selected="true">1</button>
+                            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#botton1" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Option 1</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#botton2" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">2</button>
+                            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#botton2" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Option 2</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#botton3" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">3</button>
+                            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#botton3" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Option 3</button>
                         </li>
                     </ul>
                     <div class="tab-content" id="pills-tabContent">
@@ -133,17 +133,17 @@ function show_Place_Province()
                     </div>
                     <ul class="nav nav-pills mb-4" id="pills-tab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#botton1" type="button" role="tab" aria-controls="pills-home" aria-selected="true">1</button>
+                            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#sbotton1" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Option 1</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#botton2" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">2</button>
+                            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#sbotton2" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Option 2</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#botton3" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">3</button>
+                            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#sbotton3" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Option 3</button>
                         </li>
                     </ul>
                     <div class="tab-content" id="pills-tabContent">
-                        <div class="tab-pane fade show active" id="botton1" role="tabpanel" aria-labelledby="pills-home-tab">
+                        <div class="tab-pane fade show active" id="sbotton1" role="tabpanel" aria-labelledby="pills-home-tab">
                             
                             <div className="show-category">
                                 <div className="card" style={{ width: '18rem' }}>
@@ -177,7 +177,7 @@ function show_Place_Province()
                             </div>
 
                         </div>
-                        <div class="tab-pane fade" id="botton2" role="tabpanel" aria-labelledby="pills-profile-tab">
+                        <div class="tab-pane fade" id="sbotton2" role="tabpanel" aria-labelledby="pills-profile-tab">
 
                             <div className="show-category">
                                 <div className="card" style={{ width: '18rem' }}>
@@ -211,7 +211,7 @@ function show_Place_Province()
                             </div>
                             
                         </div>
-                        <div class="tab-pane fade" id="botton3" role="tabpanel" aria-labelledby="pills-contact-tab">
+                        <div class="tab-pane fade" id="sbotton3" role="tabpanel" aria-labelledby="pills-contact-tab">
                             
                             <div className="show-category">
                                 <div className="card" style={{ width: '18rem' }}>
@@ -248,6 +248,10 @@ function show_Place_Province()
                     </div>
                 </div>
 
+            </div>
+
+            <div>
+                <p className='Thank-You'>Thank You!</p>
             </div>
         </article>
     )

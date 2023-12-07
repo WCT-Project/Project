@@ -79,3 +79,16 @@
 .nav-link{
     color: #1a1a1a;
 }
+
+.Thank-You
+{
+    margin-top: 5em;
+    margin-bottom: 0;
+    background-color: #1a1a1a;
+    color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
