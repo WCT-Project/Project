@@ -1,6 +1,6 @@
 import React from 'react';
 import '../css/category.css';
-
+import landscape1 from '../img/landscape1.png';
 
 const Category = () => {
     return (
@@ -11,7 +11,7 @@ const Category = () => {
                 </div>
                 <div className="show-category">
                     <div className="card" style={{ width: '18rem' }}>
-                        <img src="IMAGE/landscape-1.png" className="card-img-top" alt="..." />
+                        <img src={landscape1} className="card-img-top" alt="..." />
                         <div className="card-body">
                             <h5 className="card-title">Card title</h5>
                             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -19,7 +19,7 @@ const Category = () => {
                         <span className="primary"><a href="#" className="btn ">See more...</a></span>
                     </div>
                     <div className="card" style={{ width: '18rem' }}>
-                        <img src="IMAGE/landscape-1.png" className="card-img-top" alt="..." />
+                        <img src={landscape1} className="card-img-top" alt="..." />
                         <div className="card-body">
                             <h5 className="card-title">Card title</h5>
                             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -27,7 +27,7 @@ const Category = () => {
                         <span className="primary"><a href="#" className="btn ">See more...</a></span>
                     </div>
                     <div className="card" style={{ width: '18rem' }}>
-                        <img src="IMAGE/landscape-1.png" className="card-img-top" alt="..." />
+                        <img src={landscape1} className="card-img-top" alt="..." />
                         <div className="card-body">
                             <h5 className="card-title">Card title</h5>
                             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -35,7 +35,7 @@ const Category = () => {
                         <span className="primary"><a href="#" className="btn ">See more...</a></span>
                     </div>
                     <div className="card" style={{ width: '18rem' }}>
-                        <img src="IMAGE/landscape-1.png" className="card-img-top justify-start" alt="..." />
+                        <img src={landscape1} className="card-img-top justify-start" alt="..." />
                         <div className="card-body">
                             <h5 className="card-title">Card title</h5>
                             <p className="card-text"></p>
