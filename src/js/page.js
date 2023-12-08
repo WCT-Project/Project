@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import BudgetAnalysis from './budget_analysis'
 import Home from './home'
+import Recommendation from './recommendations_page';
+
 
 
 const ParentComponent = () => {
@@ -13,6 +15,7 @@ const ParentComponent = () => {
               <Route path="/" element={<Home />}>
                 <Route path="/home" element={<Home />} />
                 <Route path="/budgetanalysis" element={<BudgetAnalysis />} />
+                <Route path="/" elemnt={<Recommendation />}/>
                 {/* <Route path="contact" element={<Contact />} /> */}
               </Route>
           </Routes>

@@ -15,7 +15,7 @@ function Menu() {
                             <a className="nav-link" aria-current="page" href="#"><span>Home</span></a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" aria-current="page" href="#"><span className="Budget-Analysis">Budget Analysis</span></a>
+                            <a className="nav-link" aria-current="page" href="#"><span className="XXBudget-AnalysisXX">Budget Analysis</span></a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" aria-current="page" href="#"><span>Recommendations</span></a>
