@@ -9,7 +9,7 @@ import Recommendation from './recommendations_page';
 const Home = () => {
   return (
       <div>
-        <Recommendation />
+        <BudgetAnalysis />
       </div>
   );
 };

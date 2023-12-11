@@ -23,7 +23,7 @@ const BudgetAnalyzer = () => {
                             <div className="container">
                                 <form action="" className="form" id="form2">
                                     <div className="form__field">
-                                        <label className="form__label">Min-Budget</label>
+                                        <label className="form__label" id='Min_Budget'>Min-Budget</label>
                                         <input type="number" placeholder="$$$" className="form__input" />
                                     </div>
                                 </form>

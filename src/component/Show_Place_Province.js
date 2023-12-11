@@ -13,13 +13,13 @@ function show_Place_Province()
                     </div>
                     <ul className="nav nav-pills mb-4" id="pills-tab" role="tablist">
                         <li className="nav-item" role="presentation">
-                            <button className="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#botton1" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Option 1</button>
+                            <button className="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#botton1" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Place</button>
                         </li>
                         <li className="nav-item" role="presentation">
-                            <button className="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#botton2" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Option 2</button>
+                            <button className="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#botton2" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Accommodation</button>
                         </li>
                         <li className="nav-item" role="presentation">
-                            <button className="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#botton3" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Option 3</button>
+                            <button className="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#botton3" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Transportation</button>
                         </li>
                     </ul>
                     <div className="tab-content" id="pills-tabContent">
@@ -30,28 +30,28 @@ function show_Place_Province()
                                     <img src={landscape1} className="card-img-top" alt="..." />
                                     <div className="card-body">
                                         <h5 className="card-title">Card title</h5>
-                                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <p className="card-text">Budget: 100</p>
                                     </div>
                                 </div>
                                 <div className="card" style={{ width: '18rem' }}>
                                     <img src={landscape1} className="card-img-top" alt="..." />
                                     <div className="card-body">
                                         <h5 className="card-title">Card title</h5>
-                                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <p className="card-text">Budget: 200</p>
                                     </div>
                                 </div>
                                 <div className="card" style={{ width: '18rem' }}>
                                     <img src={landscape1} className="card-img-top" alt="..." />
                                     <div className="card-body">
                                         <h5 className="card-title">Card title</h5>
-                                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <p className="card-text">Budget: 300</p>
                                     </div>
                                 </div>
                                 <div className="card" style={{ width: '18rem' }}>
                                     <img src={landscape1} className="card-img-top justify-start" alt="..." />
                                     <div className="card-body">
                                         <h5 className="card-title">Card title</h5>
-                                        <p className="card-text"></p>
+                                        <p className="card-text">Budget: 400</p>
                                     </div>
                                 </div>
                             </div>
@@ -64,21 +64,21 @@ function show_Place_Province()
                                     <img src={landscape1} className="card-img-top" alt="..." />
                                     <div className="card-body">
                                         <h5 className="card-title">Card title</h5>
-                                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <p className="card-text">Budget: </p>
                                     </div>
                                 </div>
                                 <div className="card" style={{ width: '18rem' }}>
                                     <img src={landscape1} className="card-img-top" alt="..." />
                                     <div className="card-body">
                                         <h5 className="card-title">Card title</h5>
-                                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <p className="card-text">Budget: </p>
                                     </div>
                                 </div>
                                 <div className="card" style={{ width: '18rem' }}>
                                     <img src={landscape1} className="card-img-top" alt="..." />
                                     <div className="card-body">
                                         <h5 className="card-title">Card title</h5>
-                                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <p className="card-text">Budget: </p>
                                     </div>
                                 </div>
                                 <div className="card" style={{ width: '18rem' }}>
@@ -98,21 +98,21 @@ function show_Place_Province()
                                     <img src={landscape1} className="card-img-top" alt="..." />
                                     <div className="card-body">
                                         <h5 className="card-title">Card title</h5>
-                                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <p className="card-text">Budget: </p>
                                     </div>
                                 </div>
                                 <div className="card" style={{ width: '18rem' }}>
                                     <img src={landscape1} className="card-img-top" alt="..." />
                                     <div className="card-body">
                                         <h5 className="card-title">Card title</h5>
-                                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <p className="card-text">Budget: </p>
                                     </div>
                                 </div>
                                 <div className="card" style={{ width: '18rem' }}>
                                     <img src={landscape1} className="card-img-top" alt="..." />
                                     <div className="card-body">
                                         <h5 className="card-title">Card title</h5>
-                                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <p className="card-text">Budget: </p>
                                     </div>
                                 </div>
                                 <div className="card" style={{ width: '18rem' }}>
@@ -150,21 +150,21 @@ function show_Place_Province()
                                     <img src={landscape1} className="card-img-top" alt="..." />
                                     <div className="card-body">
                                         <h5 className="card-title">Card title</h5>
-                                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <p className="card-text">Budget: </p>
                                     </div>
                                 </div>
                                 <div className="card" style={{ width: '18rem' }}>
                                     <img src={landscape1} className="card-img-top" alt="..." />
                                     <div className="card-body">
                                         <h5 className="card-title">Card title</h5>
-                                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <p className="card-text">Budget: </p>
                                     </div>
                                 </div>
                                 <div className="card" style={{ width: '18rem' }}>
                                     <img src={landscape1} className="card-img-top" alt="..." />
                                     <div className="card-body">
                                         <h5 className="card-title">Card title</h5>
-                                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <p className="card-text">Budget: </p>
                                     </div>
                                 </div>
                                 <div className="card" style={{ width: '18rem' }}>
@@ -184,21 +184,21 @@ function show_Place_Province()
                                     <img src={landscape1} className="card-img-top" alt="..." />
                                     <div className="card-body">
                                         <h5 className="card-title">Card title</h5>
-                                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <p className="card-text">Budget: </p>
                                     </div>
                                 </div>
                                 <div className="card" style={{ width: '18rem' }}>
                                     <img src={landscape1} className="card-img-top" alt="..." />
                                     <div className="card-body">
                                         <h5 className="card-title">Card title</h5>
-                                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <p className="card-text">Budget: </p>
                                     </div>
                                 </div>
                                 <div className="card" style={{ width: '18rem' }}>
                                     <img src={landscape1} className="card-img-top" alt="..." />
                                     <div className="card-body">
                                         <h5 className="card-title">Card title</h5>
-                                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <p className="card-text">Budget: </p>
                                     </div>
                                 </div>
                                 <div className="card" style={{ width: '18rem' }}>
@@ -225,14 +225,14 @@ function show_Place_Province()
                                     <img src={landscape1} className="card-img-top" alt="..." />
                                     <div className="card-body">
                                         <h5 className="card-title">Card title</h5>
-                                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <p className="card-text">Budget: </p>
                                     </div>
                                 </div>
                                 <div className="card" style={{ width: '18rem' }}>
                                     <img src={landscape1} className="card-img-top" alt="..." />
                                     <div className="card-body">
                                         <h5 className="card-title">Card title</h5>
-                                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <p className="card-text">Budget: </p>
                                     </div>
                                 </div>
                                 <div className="card" style={{ width: '18rem' }}>
@@ -246,7 +246,7 @@ function show_Place_Province()
                                     <img src={landscape1} className="card-img-top" alt="..." />
                                     <div className="card-body">
                                         <h5 className="card-title">Card title</h5>
-                                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <p className="card-text">Budget: </p>
                                     </div>
                                 </div>
 
@@ -266,4 +266,4 @@ function show_Place_Province()
 }
 
 const Show_Place_Province = show_Place_Province
-export default show_Place_Province
+export default Show_Place_Province
