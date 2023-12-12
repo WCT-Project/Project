@@ -5,11 +5,12 @@ import Category from '../component/category';
 import Show_Place_Province from '../component/Show_Place_Province';
 import BudgetAnalysis from './budget_analysis';
 import Recommendation from './recommendations_page';
+import ParentComponent from './page'
 
 const Home = () => {
   return (
       <div>
-        <BudgetAnalysis />
+        <ParentComponent />
       </div>
   );
 };

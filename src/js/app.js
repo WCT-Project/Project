@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import '../css/app.css';
-import Page from './page';
+import ParentComponent from './page';
 
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
 
     
     return (
-            <Page/>
+            <ParentComponent/>
     );
 }
 

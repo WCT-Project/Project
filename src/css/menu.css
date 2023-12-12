@@ -15,9 +15,10 @@
 {
     color: #fdfdfd;
 }
-.nav-item > .nav-link > span
+.Link
 {
     color: #1a1a1a;
+    text-decoration: none;
 }
 .navbar-nav
 {

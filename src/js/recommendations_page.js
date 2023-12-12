@@ -7,15 +7,15 @@ import BudgetAnalysis from "./budget_analysis";
 import City_Recommend  from "../component/city_recommend";
 
 
-function recommendation_func()   {
-    return  (
-        <div>
-          <Menu />      
-          <City_Recommend />
-        </div>
-    )
-}
 
 
-const Recommendation = recommendation_func;
+const Recommendation = () => {
+  return (
+    <div>
+      <Menu />      
+      <City_Recommend />
+    </div>
+  );
+};
+
 export default Recommendation;

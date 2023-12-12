@@ -1,4 +1,5 @@
 import '../css/menu.css';
+import { Link } from 'react-router-dom';
 
 function Menu() {
   return (
@@ -12,13 +13,13 @@ function Menu() {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <a className="nav-link" aria-current="page" href="#"><span>Home</span></a>
+                            <a className="nav-link" aria-current="page" href="#"><span><Link to='/home' className='Link'>Home</Link></span></a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" aria-current="page" href="#"><span className="XXBudget-AnalysisXX">Budget Analysis</span></a>
+                            <a className="nav-link" aria-current="page" href="#"><span className="XXBudget-AnalysisXX"><Link to='/budget_analysis' className='Link'>Budget Analysis</Link></span></a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" aria-current="page" href="#"><span>Recommendations</span></a>
+                            <a className="nav-link" aria-current="page" href="#"><span><Link to='/recommendation' className='Link'>Recommendations</Link></span></a>
                         </li>
                         <li className="nav-item nav-LOGIN-REGISTER">
                             <a className="nav-link" href="#"><span className="login">LOGIN/REGISTER</span></a>
