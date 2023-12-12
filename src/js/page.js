@@ -9,12 +9,12 @@ import Recommendation from './recommendations_page';
 const ParentComponent = () => {
   return (
       <BrowserRouter>       
-          <Routes path='/' element={<Home />}>
-              {/* <Route path="/"  />   */}
-              <Route path="/recommendation" element={<Recommendation />}/>
-              <Route path="/budget_analysis" element={<BudgetAnalysis />} />
-              {/* <Route path="contact" element={<Contact />} /> */}             
-          </Routes>
+        <Routes>
+            <Route path="/" element={<Home />}/>
+            <Route path="/recommendation" element={<Recommendation />}/>
+            <Route path="/budget_analysis" element={<BudgetAnalysis />} />
+        </Routes>
+
       </BrowserRouter>
   );
 };

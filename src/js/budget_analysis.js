@@ -8,6 +8,7 @@ const BudgetAnalysis = () => {
   return (
       <div>
           <Menu />
+          <BudgetAnalyzer/>
           <Category />
           <Show_Place_Province />
       </div>

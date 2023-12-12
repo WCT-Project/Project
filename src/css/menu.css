@@ -1,9 +1,16 @@
+.active-menu {
+    border-radius: 25px;
+    border: 3px solid #cccccc;
+}
+.menu-container {
+    padding: 0 48px;
+}
 .border-header
 {
     border: solid 2px #cccccc;
     border-radius: 10px;
     border-style: dashed;
-    margin: 1em;
+    margin: 16px;
     background-color: #ffffff;
 }
 .nav-LOGIN-REGISTER

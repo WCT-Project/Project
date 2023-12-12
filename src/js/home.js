@@ -1,16 +1,20 @@
 import React from 'react';
 import Menu from '../component/menu';
 import BudgetAnalyzer from '../component/budget_anlyzer';
+import Banner from '../component/banner';
 import Category from '../component/category';
 import Show_Place_Province from '../component/Show_Place_Province';
-import BudgetAnalysis from './budget_analysis';
-import Recommendation from './recommendations_page';
-import ParentComponent from './page'
 
 const Home = () => {
   return (
       <div>
-        <ParentComponent />
+        <Menu />
+        <div width="100%">
+          <Banner />
+        </div>
+        <BudgetAnalyzer/>
+        <Category />
+        <Show_Place_Province />
       </div>
   );
 };
