@@ -4,5 +4,12 @@ window.onscroll = function () {
         var scrollingSize = window.scrollY >= 32 ? 16 : window.scrollY/2;
         var size = 16 - scrollingSize;
         dynamicNav.style.margin = '16px ' + size +'px'
+        
+        if (window.scrollY > 32) {
+            dynamicNav.style.borderRadius = '0'
+        }
+        else {
+            dynamicNav.style.borderRadius = '10px'
+        }
     }
 };

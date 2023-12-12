@@ -14,7 +14,7 @@ const Home = () => {
         </div>
         <BudgetAnalyzer/>
         <Category />
-        <Show_Place_Province />
+        {/* <Show_Place_Province /> */}
       </div>
   );
 };
