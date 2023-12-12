@@ -92,3 +92,17 @@
     padding-top: 0.5em;
     padding-bottom: 0.5em;
 }
+
+.add
+{
+    width: 5em;
+    display: flex;
+    justify-content: center;
+}
+.spanadd
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3px;
+}

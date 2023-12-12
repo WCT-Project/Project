@@ -1,6 +1,7 @@
 import React from 'react'
 import '../css/Show_Place_Province.css'
 import landscape1 from '../img/landscape1.png'
+import datacate from "../json/Category.json"
 
 function show_Place_Province()
 {
@@ -26,19 +27,24 @@ function show_Place_Province()
                         <div className="tab-pane fade show active" id="botton1" role="tabpanel" aria-labelledby="pills-home-tab">
                             
                             <div className="show-category">
-                                <div className="card" style={{ width: '18rem' }}>
-                                    <img src={landscape1} className="card-img-top" alt="..." />
-                                    <div className="card-body">
-                                        <h5 className="card-title">Card title</h5>
-                                        <p className="card-text">Budget: 100</p>
+                                {datacate.Battambang.Place.map((item) => (
+                                    <div className="card" style={{ width: '18rem' }}>
+                                        <img src={item.image} className="card-img-top" alt="..." />
+                                        <div className="card-body">
+                                            <h5 className="card-title">{item.title}</h5>
+                                            <p className="card-text">{item.budget}$</p>
+                                            <p>{item.infor}</p>
+                                        </div>
+                                        <span className='spanadd'><button className='add'>add</button></span>
                                     </div>
-                                </div>
-                                <div className="card" style={{ width: '18rem' }}>
+                                ))}
+                                {/* <div className="card" style={{ width: '18rem' }}>
                                     <img src={landscape1} className="card-img-top" alt="..." />
                                     <div className="card-body">
                                         <h5 className="card-title">Card title</h5>
                                         <p className="card-text">Budget: 200</p>
                                     </div>
+                                    <span className='spanadd'><button className='add'>add</button></span>
                                 </div>
                                 <div className="card" style={{ width: '18rem' }}>
                                     <img src={landscape1} className="card-img-top" alt="..." />
@@ -46,6 +52,7 @@ function show_Place_Province()
                                         <h5 className="card-title">Card title</h5>
                                         <p className="card-text">Budget: 300</p>
                                     </div>
+                                    <span className='spanadd'><button className='add'>add</button></span>
                                 </div>
                                 <div className="card" style={{ width: '18rem' }}>
                                     <img src={landscape1} className="card-img-top justify-start" alt="..." />
@@ -53,7 +60,8 @@ function show_Place_Province()
                                         <h5 className="card-title">Card title</h5>
                                         <p className="card-text">Budget: 400</p>
                                     </div>
-                                </div>
+                                    <span className='spanadd'><button className='add'>add</button></span>
+                                </div> */}
                             </div>
 
                         </div>
@@ -99,6 +107,7 @@ function show_Place_Province()
                                     <div className="card-body">
                                         <h5 className="card-title">Card title</h5>
                                         <p className="card-text">Budget: </p>
+                                        <p>Information</p>
                                     </div>
                                 </div>
                                 <div className="card" style={{ width: '18rem' }}>

@@ -1,7 +1,7 @@
 import React from 'react';
 import '../css/category.css';
 import landscape1 from '../img/landscape1.png';
-import angkor_wat from '../img/angkor_wat.jpeg';
+import angkor_wat from '../img/angkor_wat.jpg';
 import phnom_penh from '../img/download.jpeg'
 import battambang from '../img/battambang.jpeg'
 import kompot from '../img/kompot.jpeg'
