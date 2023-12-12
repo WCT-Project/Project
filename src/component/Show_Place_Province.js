@@ -2,6 +2,7 @@ import React from 'react'
 import '../css/Show_Place_Province.css'
 import landscape1 from '../img/landscape1.png'
 import datacate from "../json/Category.json"
+hi
 
 function show_Place_Province()
 {
