@@ -35,7 +35,6 @@ function show_Place_Province()
                                             <p className="card-text">{item.budget}$</p>
                                             <p>{item.infor}</p>
                                         </div>
-                                        <span className='spanadd'><button className='add'>add</button></span>
                                     </div>
                                 ))}
                                 {/* <div className="card" style={{ width: '18rem' }}>

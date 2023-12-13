@@ -16,9 +16,8 @@ const Category = () => {
                             <h5 className="card-title">Card title</h5>
                             <p className="card-text">Detail1</p>
                         </div>
-                        <span className="primary"><a href="#" className="btn ">See more...</a></span>
                     </div>
-                    <div className="card" style={{ width: '18rem' }}>
+                    {/* <div className="card" style={{ width: '18rem' }}>
                         <img src={landscape1} className="card-img-top" alt="..." />
                         <div className="card-body">
                             <h5 className="card-title">Card title</h5>
@@ -41,7 +40,7 @@ const Category = () => {
                             <p className="card-text"></p>
                         </div>
                         <span className="primary"><a href="#" className="btn ">See more...</a></span>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </article>
