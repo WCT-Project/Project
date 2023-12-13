@@ -27,7 +27,7 @@ function show_Place_Province()
                         <div className="tab-pane fade show active" id="botton1" role="tabpanel" aria-labelledby="pills-home-tab">
                             
                             <div className="show-category">
-                                {datacate.Battambang.Place.map((item) => (
+                                {datacate.battambang.place.map((item) => (
                                     <div className="card" style={{ width: '18rem' }}>
                                         <img src={item.image} className="card-img-top" alt="..." />
                                         <div className="card-body">

@@ -1,6 +1,6 @@
 {
-    "Battambang" : {
-        "Place" : [
+    "battambang" : {
+        "place" : [
             {
                 "id" : "1",
                 "title" : "Resort",
@@ -28,12 +28,33 @@
                 "budget" : "50",
                 "infor" : "The most beautiful place in Battambang city",
                 "image" : "img/angkor_wat.jpg"
+            },
+            {
+                "id" : "4",
+                "title" : "Forest",
+                "budget" : "50",
+                "infor" : "The most beautiful place in Battambang city",
+                "image" : "img/angkor_wat.jpg"
+            },
+            {
+                "id" : "4",
+                "title" : "Forest",
+                "budget" : "50",
+                "infor" : "The most beautiful place in Battambang city",
+                "image" : "img/angkor_wat.jpg"
+            },
+            {
+                "id" : "4",
+                "title" : "Forest",
+                "budget" : "50",
+                "infor" : "The most beautiful place in Battambang city",
+                "image" : "img/angkor_wat.jpg"
             }
         ],
-        "Accommodation" : [
+        "accommodation" : [
 
         ],
-        "Transportation" : [
+        "transportation" : [
             
         ]
     }
