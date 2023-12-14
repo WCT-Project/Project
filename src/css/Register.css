@@ -1,0 +1,171 @@
+*
+{
+    font-family: 
+    'Balsamiq Sans', 
+    sans-serif;
+}
+
+/*  ===========================================================
+    ==================Show the NavBar Header===================
+    =========================================================== */
+
+
+.border-header
+{
+    border: solid 2px #cccccc;
+    border-radius: 10px;
+    border-style: dashed;
+    margin: 1em;
+    background-color: #ffffff;
+}
+
+.nav-item > .nav-link
+{
+    color: #fdfdfd;
+}
+
+.nav-item > .nav-link > span
+{
+    color: #1a1a1a;
+}
+
+.navbar-nav
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div > ul
+{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+}
+
+.navbar-collapse > ul > li
+{
+    display:block;
+    justify-content: center;
+}
+
+.collapse > ul > li
+{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+header
+{
+    overflow:scroll;
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    width: 100%;
+}
+
+.home
+{
+    border: solid 2px #202020;
+    border-radius: 25px;
+    padding: 3px 9px;
+}
+
+.wrapper {
+    position: relative;
+    width: 400px;
+    height: 600px;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    text-align: center; 
+    margin: auto;
+
+    
+    /* overflow: hidden; */
+}
+
+.wrapper .form-box {
+    width: 100%;
+    padding: 40px;
+}
+
+
+
+.form-box h2 {
+    font-size: 2em;
+    text-align: left;
+}
+
+.input-boxsss {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid;
+    margin: 30px 0;
+}
+
+.input-boxsss label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-boxsss input:focus~label,
+.input-boxsss input:valid~label {
+        top: -5px;
+}
+
+.input-boxsss input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.input-boxsss .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    line-height: 57px;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: #1a1a1a;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.log {
+    margin-bottom: 1em;
+    width: 100%;
+    height: 45px;
+    background: #000000;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color:#ffffff;
+    font-weight: 500;
+}
+
+
+
+
