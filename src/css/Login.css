@@ -46,14 +46,14 @@ div > ul
     padding-right: 10px;
 }
 
-header
+/* header
 {
     overflow:scroll;
     position: sticky;
     z-index: 100;
     top: 0;
     width: 100%;
-}
+} */
 
 .home
 {
