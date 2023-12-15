@@ -3,11 +3,6 @@
     margin-top: 2em;
     margin-bottom: 1em;
 }
-.card-img-top
-{
-  width: auto;
-  height: 25vh;
-}
 .show-category
 {
     display: flex;
