@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import login_bg from '../img/login_bg.png'
-import './other/Loginpp'
 
 import $ from 'jquery'
 
