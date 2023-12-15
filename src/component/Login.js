@@ -6,7 +6,7 @@ function logins() {
     const register = '/register'
 
     return (
-        <div className="body">
+        <div className="bodyss ">
             {/* <header>
                 <nav className="navbar navbar-expand-lg navbar-light bg-light border-header">
                     <div className="container-fluid">
@@ -24,37 +24,41 @@ function logins() {
                     </div>
                 </nav>
             </header> */}
-    
             <div className="wrapper wrappers">
-                <div className="form-box login form-boxs">
-                    <h2>Login</h2>
-                    <form action="#">
-                        <div className="input-box input-boxss"> 
-                            <span className="icon"><ion-icon name="mail-outline"></ion-icon></span>
-                            <input
-                                type="email"
-                                // value={email}
-                                // onChange={handleEmailChange}
-                                required
-                            />
-                            <label>Email</label>
+                <div className="form-box login form-boxs border-box">
+                    
+                    <div className="blur">
+                        <div>
+                            <h2 className="tripwallet">Welcome<span> TripWallet</span></h2>
                         </div>
-                        <div className="input-box input-boxss"> 
-                            <span className="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
-                            <input
-                                type="password"
-                                // value={password}
-                                // onChange={handlePasswordChange}
-                                required
-                            />
-                            <label>Password</label>
-                        </div>
-        
-                        <button type="submit" className="log">Login</button>
-                        <div className=" login-register"> 
-                            <p>Don't have an account? <a href={register} className="register-link">Register</a></p>
-                        </div>
-                    </form>
+                        <form action="#">
+                            <div className="input-box input-boxss"> 
+                                <span className="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                                <input
+                                    type="email"
+                                    // value={email}
+                                    // onChange={handleEmailChange}
+                                    required
+                                />
+                                <label>Email</label>
+                            </div>
+                            <div className="input-box input-boxss"> 
+                                <span className="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                                <input
+                                    type="password"
+                                    // value={password}
+                                    // onChange={handlePasswordChange}
+                                    required
+                                />
+                                <label>Password</label>
+                            </div>
+            
+                            <button type="submit" className="log">Login</button>
+                            <div className=" login-register"> 
+                                <p>Don't have an account? <a href={register} className="register-link">Register</a></p>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>  
     
