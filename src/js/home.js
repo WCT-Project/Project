@@ -9,7 +9,7 @@ import Footer_menu from '../component/footer_menu';
 const Home = () => {
   return (
       <div>
-        {/* <Menu /> */}
+        <Menu />
         <div width="100%">
           <Banner />
         </div>
