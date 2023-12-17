@@ -4,6 +4,7 @@ import BudgetAnalyzer from '../component/budget_anlyzer';
 import Banner from '../component/banner';
 import Category from '../component/category';
 import Show_Place_Province from '../component/Show_Place_Province';
+import Footer_menu from '../component/footer_menu';
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
         <BudgetAnalyzer/>
         <Category />
         {/* <Show_Place_Province /> */}
+        <Footer_menu />
       </div>
   );
 };

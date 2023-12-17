@@ -1,0 +1,47 @@
+
+.nest-footer
+{
+    background-color: #1D231F;
+    width: 100%;
+    color: aliceblue;
+}
+.nest-footer-row
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    padding-top: 2em;
+    margin-left: 4em;
+    margin-right: 4em;
+}
+.nest-footer-col
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.nest-footer-row
+.first
+{
+    width: 17em;
+}
+
+.dev-names
+{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1em;
+}
+
+.nest-icon-footer
+{
+    display: flex;
+    justify-content: start;
+}
+.nest-icon-footer a
+{
+    margin-left: 1em;
+    margin-right: 1em;
+}
