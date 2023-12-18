@@ -1,5 +1,6 @@
-import React from 'react';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
+import { createContext, useContext, useState , React} from 'react';
+
 import Menu from '../component/menu';
 import BudgetAnalysis from './budget_analysis'
 import Home from './home'
@@ -9,7 +10,12 @@ import Registers_Form from './Registerpge';
 
 
 
+
 const ParentComponent = () => {
+  const AuthContext = createContext();
+
+  const [authenticated, setAuthenticated] = useState(false);
+
   return (
       <BrowserRouter>       
         <Routes>

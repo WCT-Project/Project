@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { LoginProvider, useLogin } from '../js/LoginHandler';
+
 import login_bg from '../img/login_bg.png'
+import { useNavigate } from 'react-router-dom';
 
 import $ from 'jquery'
 
@@ -8,8 +11,24 @@ import '../css/Login.css'
 
 
 
-const Login = () => {
-    const register = '/register'
+const LoginHandling = () => {
+    const navigate = useNavigate();
+
+    const {isLoggedIn, isAdmin, userName, login, logout} = useLogin();
+
+    const handleLogin = async (e) => {
+        e.preventDefault();
+
+        login(email, password);
+
+        console.log('login', email, password, isLoggedIn);
+
+
+        if (isLoggedIn) {
+          navigate('/')
+        }
+
+    };
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -17,41 +36,19 @@ const Login = () => {
     const handleEmailChange = (e) => setEmail(e.target.value);
     const handlePasswordChange = (e) => setPassword(e.target.value);
 
-    const handleLogin = async (e) => {
-        e.preventDefault();
-
-        $.ajax({
-            url: 'http://127.0.0.1:5000/user/authenticate',
-            type: 'POST',
-            dataType: 'json',
-            contentType: 'application/json',  // Set content type to JSON
-            data: JSON.stringify({
-                email: email,  // Replace with your actual email
-                password: password,    // Replace with your actual password
-            }),
-
-            success: function (response) {
-                // Update state with fetched data
-                if (response) console.log(response)
-            },
-            error: function (error) {
-                console.error('Error:', error);
-            },
-        });
-    };
-
     const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
     const togglePasswordVisibility = () => {
       setIsPasswordVisible(!isPasswordVisible);
     };
 
+
     return (
       <body className='body-login'>
         <div className="loginlogin">
           <img src={login_bg} alt="login image" className="login__img" />
 
-          <form action="" className="login__formlogin">
+          <form onSubmit={handleLogin} className="login__formlogin">
               <h1 className="login__title">Login</h1>
 
               <div className="login__content">
@@ -59,7 +56,14 @@ const Login = () => {
                     <i className="ri-user-3-line login__icon"></i>
 
                     <div className="login__box-input">
-                      <input type="email" required className="login__input input-login" id="login-email" placeholder=" " />
+                      <input 
+                        type="email" 
+                        required 
+                        className="login__input input-login" 
+                        id="login-email" 
+                        onChange={handleEmailChange}
+                        value={email} 
+                        placeholder=" " />
                       <label for="login-email" className="login__label">Email</label>
                     </div>
                 </div>
@@ -69,17 +73,17 @@ const Login = () => {
 
                     <div className="login__box-input">
                     <input
-                      type={isPasswordVisible ? 'text' : 'password'}
                       required
                       className="login__input input-login"
                       id="login-pass"
+                      onChange={handlePasswordChange}
+                      value={password}
                       placeholder=" "
                     />
                     <label htmlFor="login-pass" className="login__label">
                       Password
                     </label>
                     <i
-                      className={`ri-${isPasswordVisible ? 'eye-line' : 'eye-off-line'} login__eye`}
                       onClick={togglePasswordVisibility}
                     ></i>
                   </div>
@@ -107,6 +111,13 @@ const Login = () => {
     
 }
 
+const Login = () => {
+  return (
+    <LoginProvider>
+      <LoginHandling />
+    </LoginProvider>
+  );
+};
 
 
 export default Login

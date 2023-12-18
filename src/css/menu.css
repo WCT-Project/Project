@@ -1,6 +1,13 @@
 .active-menu {
     border-radius: 25px;
     border: 3px solid #cccccc;
+    background-color: #2e3a32;
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+}
+.active-menu-span {
+    color: white;
+    font-weight: 500;
 }
 .menu-container {
     padding: 0 48px;
