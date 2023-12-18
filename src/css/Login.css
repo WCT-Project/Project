@@ -28,6 +28,7 @@ img {
 
 /*=============== LOGIN ===============*/
 .loginlogin {
+  padding-top: 25px;
   position: relative;
   display: grid;
   align-items: center;
