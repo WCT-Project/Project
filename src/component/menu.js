@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 
 
-import { LoginProvider, useLogin } from '../js/LoginHandler';
+import { useLogin } from '../js/LoginHandler';
 import '../css/menu.css';
 
 
@@ -43,20 +43,19 @@ function Menu() {
                                     <span className={`menuitem ${isMenuActive('recommendation') ? 'active-menu-span' : ''}`} data-menu-name="recommendation">Recommendations</span>
                                 </Link>
                             </li>
-                            <li className="nav-item nav-LOGIN-REGISTER">
-                                {/* {isLoggedIn ? (
+                            <li className={`nav-item ${!isLoggedIn ? 'nav-LOGIN-REGISTER' : 'nav-LOGGED-IN'}`}>
+                                {!isLoggedIn ? (
                                         <Link to="/login" className="nav-link" aria-current="page">
                                             <span className="login">Login / Register</span>
                                         </Link>
                                     ) : (
-                                        <Link to="/login" className="nav-link" aria-current="page">
-                                            <span className="login">{userName}</span>
+                                        <Link to="/login" className="nav-link logged-in" aria-current="page">
+                                            <t className="fa fa-user" style={{marginRight: '5px'}}/>{userName}
                                         </Link>
+                                       
                                     )
-                                } */}
-                                <Link to="/login" className="nav-link" aria-current="page">
-                                    <span className="login">Login / Register</span>
-                                </Link>
+                                }
+                              
                                 
                             </li>
                         </ul>

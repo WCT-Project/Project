@@ -11,9 +11,11 @@ import City_Recommend  from "../component/city_recommend";
 
 const Recommendation = () => {
   return (
-    <div>
+    <div className="root">
       <Menu />      
-      <City_Recommend />
+      <body>
+        <City_Recommend />
+      </body>
     </div>
   );
 };

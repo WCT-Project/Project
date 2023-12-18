@@ -8,7 +8,7 @@ import kompot from '../img/kompot.jpeg'
 
 const City_Recommend = () => {
     return (
-        <article>
+        <article className="root">
             <div className="nest-beach-boxshow">
                 <div>
                     <h4 className="main-caption caption-category"><b>Recommendation City in Cambodia</b></h4>

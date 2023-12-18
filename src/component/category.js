@@ -28,7 +28,7 @@ const Category = () => {
             success: function (response) {
                 // Update state with fetched data
                 setCategories(response.categories);
-                if (response) console.log(response.categories)
+                // if (response) console.log(response.categories)
             },
             error: function (error) {
                 console.error('Error:', error);

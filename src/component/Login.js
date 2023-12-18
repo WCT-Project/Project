@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { LoginProvider, useLogin } from '../js/LoginHandler';
+import { useLogin } from '../js/LoginHandler';
 
 import login_bg from '../img/login_bg.png'
 import { useNavigate } from 'react-router-dom';
@@ -42,6 +42,10 @@ const LoginHandling = () => {
       setIsPasswordVisible(!isPasswordVisible);
     };
 
+    useEffect(() => {
+        if (isLoggedIn) navigate('/')
+    }, [isLoggedIn, isAdmin]);
+
 
     return (
       <body className='body-login'>
@@ -74,6 +78,7 @@ const LoginHandling = () => {
                     <div className="login__box-input">
                     <input
                       required
+                      type={isPasswordVisible ? 'text' : 'password'}
                       className="login__input input-login"
                       id="login-pass"
                       onChange={handlePasswordChange}
@@ -84,8 +89,9 @@ const LoginHandling = () => {
                       Password
                     </label>
                     <i
-                      onClick={togglePasswordVisibility}
-                    ></i>
+                        className={`ri-${isPasswordVisible ? 'eye-line' : 'eye-off-line'} login__eye`}
+                        onClick={togglePasswordVisibility}
+                      ></i>
                   </div>
                 </div>
               </div>
@@ -113,9 +119,7 @@ const LoginHandling = () => {
 
 const Login = () => {
   return (
-    <LoginProvider>
       <LoginHandling />
-    </LoginProvider>
   );
 };
 

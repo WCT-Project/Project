@@ -6,11 +6,13 @@ import Show_Place_Province from '../component/Show_Place_Province';
 
 const BudgetAnalysis = () => {
   return (
-      <div>
+      <div className="root">
           <Menu />
-          <BudgetAnalyzer/>
-          <Category />
-          <Show_Place_Province />
+          <body>
+            <BudgetAnalyzer/>
+            <Category />
+            <Show_Place_Province />
+          </body>
       </div>
   );
 };

@@ -8,15 +8,17 @@ import Footer_menu from '../component/footer_menu';
 
 const Home = () => {
   return (
-      <div>
+      <div className="root-home">
         <Menu />
-        <div width="100%">
-          <Banner />
-        </div>
-        <BudgetAnalyzer/>
-        <Category />
-        {/* <Show_Place_Province /> */}
-        <Footer_menu />
+        <body>
+          <div width="100%">
+            <Banner />
+          </div>
+          <BudgetAnalyzer/>
+          <Category />
+          {/* <Show_Place_Province /> */}
+          <Footer_menu />
+        </body>
       </div>
   );
 };

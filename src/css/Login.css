@@ -131,6 +131,14 @@ img {
   cursor: pointer;
   margin-bottom: 2rem;
 }
+
+.login__buttonlogin:hover {
+  background-color: #e4e4e4;
+}
+.login__buttonlogin:active {
+  background-color: #c7c7c7;
+  box-shadow: 1px 1px 7px ;
+}
 .login__registerlogin {
   text-align: center;
 }

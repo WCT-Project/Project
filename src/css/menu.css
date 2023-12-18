@@ -22,12 +22,33 @@
 }
 .nav-LOGIN-REGISTER
 {
-    background-color: #1a1a1a;
+    background-color: #2e3a32;
     border-radius: 6px;
 }
+
+.nav-LOGGED-IN
+{
+    background-color: #d6d6d6;
+    border-radius: 12px;
+}
+.nav-LOGGED-IN:hover
+{
+    background-color: #2e3a32;
+    color: white;
+}
+
 .nav-item > .nav-link > .login
 {
     color: #fdfdfd;
+}
+.nav-item > .nav-link > .logged-in
+{
+    padding-left: 5px;
+    color: #1a1a1a;
+}
+.logged-in:hover
+{
+    color: white;
 }
 .Link
 {
