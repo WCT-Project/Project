@@ -2,3 +2,30 @@
     height: 500px;
     background-color: #1D231F;
 }
+.banner-item div
+{
+    color: white;
+}
+
+.nest-item-banner
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 1em;
+
+}
+.div-img img
+{
+    width: 25em;
+    height: 16em;
+}
+
+.h3
+{
+    font-size: 80px;
+}
+.p
+{
+    font-size: 20px;
+}
