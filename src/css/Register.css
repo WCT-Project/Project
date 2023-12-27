@@ -34,8 +34,9 @@ img {
 }
 .login__img {
   position: absolute;
+  top: -100px;
   width: 100%;
-  height: 100vh;
+  height: 110vh;
   object-fit: cover;
   object-position: center;
 }

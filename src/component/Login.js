@@ -49,7 +49,7 @@ const LoginHandling = () => {
     return (
       <body className='body-login'>
         <div className="loginlogin">
-          <img src={login_bg} alt="login image" className="login__img" />
+          <img src={login_bg} alt="login image" className="login_img" />
 
           <form onSubmit={handleLogin} className="login__formlogin">
               <h1 className="login__title">Login</h1>

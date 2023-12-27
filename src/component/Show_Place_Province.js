@@ -42,17 +42,17 @@ function Show_Place_Province() {
                         </div>
                         <ul className="nav nav-pills mb-4" id="pills-tab" role="tablist">
                             <li className="nav-item" role="presentation">
-                                <button className="nav-link active" id={`${line.province.id}-pills-home-tab`} data-bs-toggle="pill" data-bs-target="#botton1" type="button" role="tab" aria-controls={`${line.province.id}-pills-home`} aria-selected="true">Place</button>
+                                <button className="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target={`#botton-1-${line.province.id}`} type="button" role="tab" aria-controls="pills-home" aria-selected="true">Place</button>
                             </li>
                             <li className="nav-item" role="presentation">
-                                <button className="nav-link" id={`${line.province.id}-pills-profile-tab`} data-bs-toggle="pill" data-bs-target="#botton2" type="button" role="tab" aria-controls={`${line.province.id}-pills-profile`} aria-selected="false">Accommodation</button>
+                                <button className="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target={`#botton-2-${line.province.id}`} type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Accommodation</button>
                             </li>
                             <li className="nav-item" role="presentation">
-                                <button className="nav-link" id={`${line.province.id}-pills-contact-tab`} data-bs-toggle="pill" data-bs-target="#botton3" type="button" role="tab" aria-controls={`${line.province.id}-pills-contact`} aria-selected="false">Transportation</button>
+                                <button className="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target={`#botton-3-${line.province.id}`} type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Transportation</button>
                             </li>
                         </ul>
                         <div className="tab-content" id="pills-tabContent">
-                            <div className="tab-pane fade show active" id="botton1" role="tabpanel" aria-labelledby={`${line.province.id}-pills-home-tab`}>
+                            <div className="tab-pane fade show active" id={`botton-1-${line.province.id}`} role="tabpanel" aria-labelledby={`${line.province.id}-pills-home-tab`}>
                                 
                                 <div className="show-category">
                                     {line.place.map((item) => (
@@ -60,8 +60,8 @@ function Show_Place_Province() {
                                             <img src={item.image_url || item.image} className="card-img-top" alt="..." />
                                             <div className="card-body">
                                                 <h5 className="card-title">{item.name}</h5>
-                                                <p className="card-text">{item.price}$</p>
-                                                <p>Budget: {item.detail}</p>
+                                                <p className="card-text">{item.detail}</p>
+                                                <p>Budget: $ {item.price}</p>
                                             </div>
                                         </div>
                                     ))}
@@ -69,7 +69,7 @@ function Show_Place_Province() {
                                 </div>
 
                             </div>
-                            <div class="tab-pane fade" id="botton2" role="tabpanel" aria-labelledby="pills-profile-tab">
+                            <div class="tab-pane fade" id={`botton-2-${line.province.id}`} role="tabpanel" aria-labelledby="pills-profile-tab">
 
                                 <div className="show-category">
                                     {line.accomodation.map((acco_item) => (
@@ -77,15 +77,15 @@ function Show_Place_Province() {
                                             <img src={acco_item.image_url || acco_item.image} className="card-img-top" alt="..." />
                                             <div className="card-body">
                                                 <h5 className="card-title">{acco_item.name}</h5>
-                                                <p className="card-text">{acco_item.price}$</p>
-                                                <p>Budget: {acco_item.detail}</p>
+                                                <p className="card-text">{acco_item.detail}</p>
+                                                <p>Budget: $ {acco_item.price}</p>
                                             </div>
                                         </div>
                                     ))}
                                 </div>
                                 
                             </div>
-                            <div class="tab-pane fade" id="botton3" role="tabpanel" aria-labelledby="pills-contact-tab">
+                            <div class="tab-pane fade" id={`botton-3-${line.province.id}`} role="tabpanel" aria-labelledby="pills-contact-tab">
                                 
                                 <div className="show-category">
                                     {line.transportation.map((trnp_item) => (
@@ -93,8 +93,8 @@ function Show_Place_Province() {
                                             <img src={trnp_item.image_url || trnp_item.image} className="card-img-top" alt="..." />
                                             <div className="card-body">
                                                 <h5 className="card-title">{trnp_item.name}</h5>
-                                                <p className="card-text">{trnp_item.price}$</p>
-                                                <p>Budget: {trnp_item.detail}</p>
+                                                <p className="card-text">{trnp_item.detail}$</p>
+                                                <p>Budget: $ {trnp_item.price}</p>
                                             </div>
                                         </div>
                                     ))}

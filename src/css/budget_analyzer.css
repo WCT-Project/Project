@@ -1,3 +1,6 @@
+.budget-analysis-container {
+    margin: 0rem 2rem 1rem 2rem;
+}
 .input-box
 {
     border: solid 2px #B3B3B3;
@@ -69,6 +72,18 @@
   box-shadow: 0 8px 24px hsla(200, 70%, 56%, .3);
 }
 
+.input-container {
+    height: 38px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.input-container input {
+    width: 97%;
+    height: 100%;
+    margin-left: 10px;
+    border: 0;
+}
 @media only screen and (max-width: 376px) {
     ::placeholder
     {
