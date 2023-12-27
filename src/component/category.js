@@ -4,18 +4,6 @@ import landscape1 from '../img/landscape1.png';
 
 import $ from 'jquery'
 
-// const fs = require('fs');
-
-// // Read the configuration file
-// const rawdata = fs.readFileSync('config.json');
-// const config = JSON.parse(rawdata);
-
-// // Access individual properties
-// const http = config.http;
-// const ip = config.ip;
-// const port = config.port;
-
-
 const Category = () => {
 
     const [categories, setCategories] = useState([]);

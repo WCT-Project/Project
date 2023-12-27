@@ -21,11 +21,10 @@ const LoginHandling = () => {
 
         login(email, password);
 
-        console.log('login', email, password, isLoggedIn);
-
-
         if (isLoggedIn) {
           navigate('/')
+        } else {
+          
         }
 
     };

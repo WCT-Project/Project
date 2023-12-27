@@ -87,17 +87,6 @@ export const LoginProvider = ({ children }) => {
     
             console.log(response);
     
-            // if (response.status) {
-            //     var user = response.user;
-            //     setIsLoggedIn(true);                  
-            //     setIsAdmin(user.is_admin);
-            //     setUserName(user.name);
-            //     setEmail(user.email);
-            //     setPassword(user.password);
-
-            // } else {
-            //     setIsLoggedIn(false);
-            // }
         } catch (error) {
             console.error('Something Went Wrong:', error);
             setIsLoggedIn(false);

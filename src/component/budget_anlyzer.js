@@ -1,8 +1,36 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import Select from 'react-select'
+
+import $ from 'jquery'
+
 import '../css/budget_analyzer.css';
 
 
 const BudgetAnalyzer = () => {
+
+    const [categories, setCategories] = useState([]);
+
+    function getCategories() {
+        $.ajax({
+            url: 'http://127.0.0.1:5000/category/selection',
+            type: 'GET',
+            dataType: 'json',
+            success: function (response) {
+                // Update state with fetched data
+                setCategories(response.categories);
+                // if (response) console.log(response.categories)
+            },
+            error: function (error) {
+                console.error('Error:', error);
+            },
+        });
+    }
+    
+    // Use useEffect to call the function when the component mounts
+    useEffect(() => {
+        getCategories();
+    }, []); // Empty dependency array ensures it only runs once
+
     return (
         <section>
             <div>
@@ -14,9 +42,9 @@ const BudgetAnalyzer = () => {
                         <div className="nest-input-budget-analysis">
                             <div className="container">
                                 <form action="" className="form" id="form1">
-                                    <div className="form__field">
-                                        <label className="form__label">Category</label>
-                                        <input type="text" placeholder="Your Type..." className="form__input" />
+                                    <div className="form__field form__field_selection">
+                                        {/* <label className="form__label">Category</label> */}
+                                        <Select options={categories} />
                                     </div>
                                 </form>
                             </div>
