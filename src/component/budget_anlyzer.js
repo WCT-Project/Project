@@ -84,8 +84,8 @@ const BudgetAnalyzer = () => {
                 <div>
                     <h4 className="main-caption">Budget Analysis</h4>
                 </div>
-                <form>
-                    <div className="row">
+                <form className='nest-form'>
+                    <div className="row form-category">
 
                         <div className="form-group col-md-6">
                             <label htmlFor="inputEmail4">Category</label>
@@ -97,7 +97,7 @@ const BudgetAnalyzer = () => {
                         </div>
                         
                     </div>
-                    <div className="row">
+                    <div className="row form-budget">
 
                         <div className="form-group col-md-6">
                             <label htmlFor="inputEmail4">Min-Budget</label>
@@ -114,10 +114,12 @@ const BudgetAnalyzer = () => {
                         
                     </div>
                     
-                    <button type="submit" className="btn btn-primary">
-                        Analysis
-                    </button>
-                    </form>
+                    <span className='span-analysis-button'>
+                        <button type="submit" className="btn btn-primary analysis-button">
+                            Analysis
+                        </button>
+                    </span>
+                </form>
 
             </div>
         </section>
