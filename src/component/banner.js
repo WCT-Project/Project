@@ -2,7 +2,8 @@ import React, { Component } from "react";
 
 import '../css/banner.css';
 import Slider from 'react-slick';
-import battambang from '../img/battambang.jpeg';
+import battambang from '../img/battambang.jpg';
+import Beaches from '../img/beaches.jpg';
 import angkor from '../img/angkor_wat.jpg';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -36,6 +37,21 @@ export default class SimpleSlider extends Component {
                     </div>
                     <div className="div-img">
                       <img src={angkor}></img>
+                    </div>
+                  </div>
+                </div>
+                <div className="banner-item">
+                  <div className="nest-item-banner">
+                    <div>
+                      <h3 className="h3">Trip &</h3>
+                      <h3 className="h3">Budget to</h3>
+                      <h3 className="h3">Beaches</h3>
+                      <p className="p">Trip Analysis budget with</p>
+                      <p className="p">Recommendation</p>
+                      <p className="p">for the best place to visit.</p>
+                    </div>
+                    <div className="div-img">
+                      <img src={Beaches}></img>
                     </div>
                   </div>
                 </div>
