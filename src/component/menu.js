@@ -1,8 +1,9 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Form, Link, useLocation } from 'react-router-dom';
 import Dropdown from 'react-bootstrap/Dropdown';
-
 import { useLogin } from '../js/LoginHandler';
 import '../css/menu.css';
+import Profile from './profile';
+import { useState } from 'react';
 
 
 function Menu() {
@@ -19,6 +20,8 @@ function Menu() {
     const isMenuActive = (menuName) => {
       return location.pathname === `/${menuName}`;
     };
+
+    const [buttonProfile, setProfile] = useState(false);
 
     
     return (
@@ -56,19 +59,16 @@ function Menu() {
                                             <Dropdown.Toggle variant="success" id="user-dropdown">
                                                 <i className="fa fa-user" style={{ marginRight: '5px' }} /> {userName}
                                             </Dropdown.Toggle>
-
                                             <Dropdown.Menu>
                                                 {/* Add dropdown menu items here */}
-                                                <Dropdown.Item href="#" className='nest-profile-logout'>Profile</Dropdown.Item>
+                                                <Dropdown.Item className='nest-profile-logout' onClick={() => setProfile(true)}>Profile</Dropdown.Item>
                                                 <Dropdown.Divider />
                                                 <Dropdown.Item onclick={logout} className='nest-profile-logout'>Logout</Dropdown.Item>
                                             </Dropdown.Menu>
                                         </Dropdown>
-                                       
                                     )
                                 }
-                              
-                                
+                                <Profile trigger={buttonProfile} setTrigger={setProfile}></Profile>
                             </li>
                         </ul>
                     </div>
