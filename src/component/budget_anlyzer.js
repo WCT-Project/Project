@@ -1,25 +1,25 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext, createContext } from 'react';
 import Select from 'react-select'
 import Input from 'react-select'
 
 import $ from 'jquery'
 
+// import { useAnalyzerFilter } from './analyzer_filter';
 import '../css/budget_analyzer.css';
 
 
 const BudgetAnalyzer = () => {
 
+    const [selectCategories, setSelectCategories] = useState([]);
+    const [selectLocations, setSelectLocations] = useState([]);
+
+    // const {categories, settingCategories, locations, settingLocations, minBudget, settingMinBudget, maxBudget, settingMaxBudget} = useAnalyzerFilter();
+
     const [categories, setCategories] = useState([]);
     const [locations, setLocations] = useState([]);
     const [minBudget, setMinBudget] = useState(0.00);
     const [maxBudget, setMaxBudget] = useState(0.00);
-    const [formData, setFormData] = useState({
-        location: '',
-        category: '',
-        minBudget: 0.0,
-        maxBudget: 0.0
-
-      });
+    
 
     function getLocations() {
         $.ajax({
@@ -28,7 +28,7 @@ const BudgetAnalyzer = () => {
             dataType: 'json',
             success: function (response) {
                 // Update state with fetched data
-                setLocations(response.provinces);
+                setSelectLocations(response.provinces);
                 // if (response) console.log(response.categories)
             },
             error: function (error) {
@@ -43,7 +43,7 @@ const BudgetAnalyzer = () => {
             dataType: 'json',
             success: function (response) {
                 // Update state with fetched data
-                setCategories(response.categories);
+                setSelectCategories(response.categories);
                 // if (response) console.log(response.categories)
             },
             error: function (error) {
@@ -52,31 +52,35 @@ const BudgetAnalyzer = () => {
         });
     }
 
-    const onChangeCategory = (e) => {
-        console.log('event ', e)
-        // setCategories(e)
-        // setFormData((prevData) => ({
-        //   ...prevData,
-        //   [name]: type === 'checkbox' ? checked : value,
-        // }));
+    const onChangeSelectCategory = (e) => {
+        setCategories([e.value, e.label]);
     };
-    const onChangeLocation = (e) => {
-        // const { name, value, type, checked } = e.target;
-        console.log('event ', e)
-        // setLocations(e)
-        // setFormData((prevData) => ({
-        //   ...prevData,
-        //   [name]: type === 'checkbox' ? checked : value,
-        // }));
+    const onChangeSelectLocation = (e) => {
+        setLocations([e.value, e.label]);
     };
-    const onChangeMinBudget = (e) => {setMinBudget(e.target.value)};
-    const onChangeMaxBudget = (e) => {setMaxBudget(e.target.value)};
+    const onChangeMinBudget = (e) => {
+        setMinBudget(parseFloat(e.target.value))
+    };
+    const onChangeMaxBudget = (e) => {
+        setMaxBudget(parseFloat(e.target.value))
+    };
+
+    const handleAnalysis = (e) => {
+        e.preventDefault();
+        localStorage.setItem('filter', JSON.stringify({
+            "categories": categories,
+            "locations": locations,
+            "minBudget": minBudget,
+            "maxBudget": maxBudget
+        }));
+
+    }
     
     // Use useEffect to call the function when the component mounts
     useEffect(() => {
         getCategories();
         getLocations();
-    }, []); // Empty dependency array ensures it only runs once
+    }, []);
 
     return (
         <section>
@@ -84,16 +88,16 @@ const BudgetAnalyzer = () => {
                 <div>
                     <h4 className="main-caption">Budget Analysis</h4>
                 </div>
-                <form className='nest-form'>
+                <form className="nest-form" onSubmit={handleAnalysis}>
                     <div className="row form-category">
 
                         <div className="form-group col-md-6">
                             <label htmlFor="inputEmail4">Category</label>
-                            <Select options={categories} onChange={onChangeCategory} placeholder="Breaches, Mountains..."/>
+                            <Select options={selectCategories} onChange={onChangeSelectCategory} placeholder="Breaches, Mountains..."/>
                         </div>
                         <div className="form-group col-md-6">
                             <label htmlFor="inputPassword4">Location</label>
-                            <Select options={locations} onChange={onChangeLocation} placeholder="Phnom Penh, Kompot..."/>
+                            <Select options={selectLocations} onChange={onChangeSelectLocation} placeholder="Phnom Penh, Kompot..."/>
                         </div>
                         
                     </div>
@@ -108,7 +112,7 @@ const BudgetAnalyzer = () => {
                         <div className="form-group col-md-6">
                             <label htmlFor="inputEmail4">Max-Budget</label>
                             <div className="input-container">
-                                <input className="input-input" min="1" type="number" value={maxBudget} onChange={onChangeMaxBudget} placeholder="Maxinum Budget..."/>
+                                <input className="input-input" min="0" type="number" value={maxBudget} onChange={onChangeMaxBudget} placeholder="Maxinum Budget..."/>
                             </div>
                         </div>
                         

@@ -59,6 +59,7 @@ export const LoginProvider = ({ children }) => {
             } else {
                 setIsLoggedIn(false);
             }
+            return response
         } catch (error) {
             console.error('Something Went Wrong:', error);
             setIsLoggedIn(false);

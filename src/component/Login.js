@@ -19,12 +19,12 @@ const LoginHandling = () => {
     const handleLogin = async (e) => {
         e.preventDefault();
 
-        login(email, password);
+        var response = await login(email, password);
 
         if (isLoggedIn) {
           navigate('/')
         } else {
-          
+          setWrongLogin(true)
         }
 
     };
@@ -36,6 +36,7 @@ const LoginHandling = () => {
     const handlePasswordChange = (e) => setPassword(e.target.value);
 
     const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+    const [isWrongLogin, setWrongLogin] = useState(false);
 
     const togglePasswordVisibility = () => {
       setIsPasswordVisible(!isPasswordVisible);
@@ -94,6 +95,14 @@ const LoginHandling = () => {
                   </div>
                 </div>
               </div>
+
+
+              {isWrongLogin && (
+                <div>
+                  Wrong Password
+                </div>
+              )}
+              
 
               <div className="login__check">
                 <div className="login__check-group">

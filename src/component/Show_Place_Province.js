@@ -11,6 +11,7 @@ function Show_Place_Province() {
     const [data, setData] = useState([]);
 
     function getLocationData() {
+        var filter = localStorage.getItem('filter')
         $.ajax({
             url: 'http://127.0.0.1:5000/province/data',
             type: 'GET',
