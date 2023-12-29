@@ -28,12 +28,16 @@ export default class SimpleSlider extends Component {
                 <div className="banner-item">
                   <div className="nest-item-banner">
                     <div>
-                      <h3 className="h3">Trip &</h3>
-                      <h3 className="h3">Budget to</h3>
-                      <h3 className="h3">Temple</h3>
-                      <p className="p">Trip Analysis budget with</p>
-                      <p className="p">Recommendation</p>
-                      <p className="p">for the best place to visit.</p>
+                      <span>
+                        <h3 className="h3">Trip &</h3>
+                        <h3 className="h3">Budget to</h3>
+                        <h3 className="h3">Temple</h3>
+                      </span>
+                      <span>
+                        <p className="p">Trip Analysis budget with</p>
+                        <p className="p">Recommendation</p>
+                        <p className="p">for the best place to visit.</p>
+                      </span>
                     </div>
                     <div className="div-img">
                       <img src={angkor}></img>
@@ -43,12 +47,16 @@ export default class SimpleSlider extends Component {
                 <div className="banner-item">
                   <div className="nest-item-banner">
                     <div>
-                      <h3 className="h3">Trip &</h3>
-                      <h3 className="h3">Budget to</h3>
-                      <h3 className="h3">Beaches</h3>
-                      <p className="p">Trip Analysis budget with</p>
-                      <p className="p">Recommendation</p>
-                      <p className="p">for the best place to visit.</p>
+                      <span>
+                        <h3 className="h3">Trip &</h3>
+                        <h3 className="h3">Budget to</h3>
+                        <h3 className="h3">Beaches</h3>
+                      </span>
+                      <span>
+                        <p className="p">Trip Analysis budget with</p>
+                        <p className="p">Recommendation</p>
+                        <p className="p">for the best place to visit.</p>
+                      </span>
                     </div>
                     <div className="div-img">
                       <img src={Beaches}></img>
@@ -58,12 +66,16 @@ export default class SimpleSlider extends Component {
                 <div className="banner-item">
                   <div className="nest-item-banner">
                     <div>
-                      <h3 className="h3">Trip &</h3>
-                      <h3 className="h3">Budget to</h3>
-                      <h3 className="h3">Cities</h3>
-                      <p className="p">Trip Analysis budget with</p>
-                      <p className="p">Recommendation</p>
-                      <p className="p">for the best place to visit.</p>
+                      <span>
+                        <h3 className="h3">Trip &</h3>
+                        <h3 className="h3">Budget to</h3>
+                        <h3 className="h3">Cities</h3>
+                      </span>
+                      <span>
+                        <p className="p">Trip Analysis budget with</p>
+                        <p className="p">Recommendation</p>
+                        <p className="p">for the best place to visit.</p>
+                      </span>
                     </div>
                     <div className="div-img">
                       <img src={battambang}></img>

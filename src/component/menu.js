@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-
+import Dropdown from 'react-bootstrap/Dropdown';
 
 import { useLogin } from '../js/LoginHandler';
 import '../css/menu.css';
@@ -49,9 +49,18 @@ function Menu() {
                                             <span className="login">Login / Register</span>
                                         </Link>
                                     ) : (
-                                        <Link to="/login" className="nav-link logged-in" aria-current="page">
-                                            <t className="fa fa-user" style={{marginRight: '5px'}}/>{userName}
-                                        </Link>
+                                        <Dropdown style={{ backgroundColor: 'black' }}>
+                                            <Dropdown.Toggle variant="success" id="user-dropdown">
+                                                <i className="fa fa-user" style={{ marginRight: '5px' }} /> {userName}
+                                            </Dropdown.Toggle>
+
+                                            <Dropdown.Menu>
+                                                {/* Add dropdown menu items here */}
+                                                <Dropdown.Item href="#/profile">Profile</Dropdown.Item>
+                                                <Dropdown.Divider />
+                                                <Dropdown.Item href="#/logout">Logout</Dropdown.Item>
+                                            </Dropdown.Menu>
+                                        </Dropdown>
                                        
                                     )
                                 }
