@@ -45,7 +45,7 @@ export const LoginProvider = ({ children }) => {
                 }),
             });
     
-            console.log(response);
+            // console.log(response);
     
             if (response.status) {
                 var user = response.user;
@@ -87,7 +87,7 @@ export const LoginProvider = ({ children }) => {
                 }),
             });
     
-            console.log(response);
+            // console.log(response);
     
         } catch (error) {
             console.error('Something Went Wrong:', error);
@@ -97,7 +97,7 @@ export const LoginProvider = ({ children }) => {
     
 
     useEffect(() => {
-        console.log('handler use effect', isLoggedIn, userName);
+        // console.log('handler use effect', isLoggedIn, userName);
     }, [isLoggedIn, userName]);
       
 

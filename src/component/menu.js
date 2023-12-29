@@ -10,7 +10,7 @@ function Menu() {
 
     const {isLoggedIn, isAdmin, userName, login, logout} = useLogin();
     
-    console.log(userName, isLoggedIn)
+    // console.log(userName, isLoggedIn)
 
     // Function to determine if a menu item is active
     const isMenuActive = (menuName) => {

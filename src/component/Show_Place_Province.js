@@ -18,7 +18,6 @@ function Show_Place_Province() {
             dataType: 'json',
             success: function (response) {
                 // Update state with fetched data
-                console.log("res", response)
                 setData(response.data);
                 // if (response) console.log(response.categories)
             },
@@ -70,7 +69,7 @@ function Show_Place_Province() {
                                 </div>
 
                             </div>
-                            <div class="tab-pane fade" id={`botton-2-${line.province.id}`} role="tabpanel" aria-labelledby="pills-profile-tab">
+                            <div className="tab-pane fade" id={`botton-2-${line.province.id}`} role="tabpanel" aria-labelledby="pills-profile-tab">
 
                                 <div className="show-category">
                                     {line.accomodation.map((acco_item) => (
@@ -86,7 +85,7 @@ function Show_Place_Province() {
                                 </div>
                                 
                             </div>
-                            <div class="tab-pane fade" id={`botton-3-${line.province.id}`} role="tabpanel" aria-labelledby="pills-contact-tab">
+                            <div className="tab-pane fade" id={`botton-3-${line.province.id}`} role="tabpanel" aria-labelledby="pills-contact-tab">
                                 
                                 <div className="show-category">
                                     {line.transportation.map((trnp_item) => (
