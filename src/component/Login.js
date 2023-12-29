@@ -96,13 +96,11 @@ const LoginHandling = () => {
                 </div>
               </div>
 
-
               {isWrongLogin && (
                 <div>
                   Wrong Password
                 </div>
               )}
-              
 
               <div className="login__check">
                 <div className="login__check-group">

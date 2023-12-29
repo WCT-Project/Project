@@ -20,8 +20,9 @@ const Register = () => {
 
     const [isPasswordVisible, setIsPasswordVisible] = useState(false);
     const [isPasswordVisibles, setIsPasswordVisibles] = useState(false);
-    const [isPasswordUnmatch, setIsPasswordUnmatch] = useState(false);
     
+    const [isPasswordUnmatch, setIsPasswordUnmatch] = useState(false);
+    const [isCannotLogin, setIsCannotLogin] = useState(false);
 
     const handleRegUserNameChange = (e) => setRegUserName(e.target.value);
     const handleRegEmailChange = (e) => setRegEmail(e.target.value);
@@ -55,8 +56,17 @@ const Register = () => {
 
     const handleRegister = async (e) => {
         e.preventDefault();
+        if (RegPassword !== RegConfirmPassword) {
+          setIsPasswordUnmatch(true);
+          return;
+        }
+        var response  = await register(RegUserName, RegEmail, RegPassword);
+        
+        if (response.status) {
+            setIsCannotLogin(true)
+        }
 
-        register(RegUserName, RegEmail, RegPassword);
+        console.log("res", response, isPasswordUnmatch)
 
     };
 
@@ -163,6 +173,12 @@ const Register = () => {
                       )
                   }
                 </div> */}
+                {isPasswordUnmatch && (
+                  <p className="" style={{fontSize: '12px'}}>Password and Confirm-Password Unmatched</p>
+                )}
+                {isCannotLogin && (
+                  <p className="" style={{fontSize: '12px'}}>Email already exist.</p>
+                )}
                 
                 <div className="login__check">
                 

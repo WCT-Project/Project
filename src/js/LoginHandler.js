@@ -86,9 +86,8 @@ export const LoginProvider = ({ children }) => {
                     password: password,
                 }),
             });
-    
-            // console.log(response);
-    
+            return response;
+
         } catch (error) {
             console.error('Something Went Wrong:', error);
             setIsLoggedIn(false);
