@@ -49,7 +49,8 @@ export const LoginProvider = ({ children }) => {
     
             if (response.status) {
                 var user = response.user;
-                setIsLoggedIn(true);                  
+                localStorage.setItem('user', JSON.stringify(response.user));
+                setIsLoggedIn(true);
                 setIsAdmin(user.is_admin);
                 setUserName(user.name);
                 setEmail(user.email);
