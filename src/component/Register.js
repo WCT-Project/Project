@@ -63,10 +63,11 @@ const Register = () => {
         var response  = await register(RegUserName, RegEmail, RegPassword);
         
         if (response.status) {
-            setIsCannotLogin(true)
+          navigate('/login')
+        } else {
+          setIsCannotLogin(true)
         }
 
-        console.log("res", response, isPasswordUnmatch)
 
     };
 
