@@ -1,0 +1,21 @@
+
+/* .admin-icon:hover {
+    color:black;
+} */
+
+.nav-admin-top {
+    margin-top: 10px;
+
+}
+.nav-admin-bottom {
+    margin-bottom: 10px;
+
+}
+.nav-admin-bottom button {
+    border-bottom: 0 !important;
+
+}
+.inline-button {
+    border:0;
+    background-color: transparent;
+}

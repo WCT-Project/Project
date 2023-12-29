@@ -9,6 +9,7 @@ import Home from './home'
 import Recommendation from './recommendations_page';
 import Register_Form from './Loginpage';
 import Registers_Form from './Registerpge';
+import Admin from './admin';
 
 
 
@@ -24,6 +25,7 @@ const ParentComponent = () => {
                 <Route path="/budget_analysis" element={<BudgetAnalysis />} />
                 <Route path="/login" element={<Register_Form />} />
                 <Route path="/register" element={<Registers_Form />} />
+                <Route path="/admin" element={<Admin />} />
             </Routes>
           </BrowserRouter>
       </LoginProvider>

@@ -91,11 +91,11 @@ const BudgetAnalyzer = () => {
                 <form className="nest-form" onSubmit={handleAnalysis}>
                     <div className="row form-category">
 
-                        <div className="form-group col-md-6">
+                        {/* <div className="form-group col-md-6">
                             <label htmlFor="inputEmail4">Category</label>
                             <Select options={selectCategories} onChange={onChangeSelectCategory} placeholder="Breaches, Mountains..." required />
-                        </div>
-                        <div className="form-group col-md-6">
+                        </div> */}
+                        <div className="form-group col-md-12">
                             <label htmlFor="inputPassword4">Location</label>
                             <Select options={selectLocations} onChange={onChangeSelectLocation} placeholder="Phnom Penh, Kompot..." required/>
                         </div>

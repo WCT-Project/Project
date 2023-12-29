@@ -1,4 +1,4 @@
-import { Form, Link, useLocation } from 'react-router-dom';
+import { Form, Link, useLocation, useNavigate } from 'react-router-dom';
 import Dropdown from 'react-bootstrap/Dropdown';
 import { useLogin } from '../js/LoginHandler';
 import '../css/menu.css';
@@ -8,27 +8,41 @@ import { useState } from 'react';
 
 function Menu() {
     const location = useLocation();
-    var user = JSON.parse(localStorage.getItem('user'))
+    const navigate = useNavigate();
+    var storedUser = JSON.parse(localStorage.getItem('user'))
+    var storedIsLoggedIn = false;
+    var storedIsAdmin = false;
 
-    console.log(user)
+    const [buttonProfile, setProfile] = useState(false);
+
+    if (storedUser.email || storedUser.name) {
+        storedIsLoggedIn = true;
+        if (storedUser.is_admin) storedIsAdmin = true
+    }
 
     const {isLoggedIn, isAdmin, userName, login, logout} = useLogin();
     
-    // console.log(userName, isLoggedIn)
-
     // Function to determine if a menu item is active
     const isMenuActive = (menuName) => {
       return location.pathname === `/${menuName}`;
     };
 
-    const [buttonProfile, setProfile] = useState(false);
+    const handleLogout = async (e) => {
+        e.preventDefault();
+        logout();
+        navigate('/')
+    }
 
     
     return (
         <header>
             <nav className="navbar navbar-expand-lg navbar-light bg-light border-header" id="dynamic-nav">
                 <div className="container-fluid menu-container">
-                    <a className="navbar-brand" href="#"><b><span>Trip</span><span>Wallet</span></b></a>
+                    {isAdmin || storedIsAdmin ? (
+                        <Link to="/admin" className="navbar-brand" href="#"><b><span>Trip</span><span>Wallet</span></b></Link>
+                    ) : (
+                        <Link to="/" className="navbar-brand" href="#"><b><span>Trip</span><span>Wallet</span></b></Link>
+                    )}
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -50,22 +64,22 @@ function Menu() {
                                 </Link>
                             </li>
                             <li className={`nav-item ${!isLoggedIn ? 'nav-LOGIN-REGISTER' : 'nav-LOGGED-IN'}`}>
-                                {!isLoggedIn ? (
-                                        <Link to="/login" className="nav-link" aria-current="page">
-                                            <span className="login">Login / Register</span>
-                                        </Link>
-                                    ) : (
+                                {isLoggedIn || storedIsLoggedIn ? (
                                         <Dropdown style={{ backgroundColor: 'black' }}>
                                             <Dropdown.Toggle variant="success" id="user-dropdown">
-                                                <i className="fa fa-user" style={{ marginRight: '5px' }} /> {userName}
+                                                <i className="fa fa-user" style={{ marginRight: '5px' }} /> {userName || storedUser.name}
                                             </Dropdown.Toggle>
                                             <Dropdown.Menu>
                                                 {/* Add dropdown menu items here */}
                                                 <Dropdown.Item className='nest-profile-logout' onClick={() => setProfile(true)}>Profile</Dropdown.Item>
                                                 <Dropdown.Divider />
-                                                <Dropdown.Item onclick={logout} className='nest-profile-logout'>Logout</Dropdown.Item>
+                                                <Dropdown.Item onClick={handleLogout} className='nest-profile-logout'>Logout</Dropdown.Item>
                                             </Dropdown.Menu>
                                         </Dropdown>
+                                    ) : (
+                                        <Link to="/login" className="nav-link" aria-current="page">
+                                            <span className="login">Login / Register</span>
+                                        </Link>
                                     )
                                 }
                                 <Profile trigger={buttonProfile} setTrigger={setProfile}></Profile>
