@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext, createContext } from 'react';
 import Select from 'react-select'
-import Input from 'react-select'
+import { useNavigate } from 'react-router-dom';
 
 import $ from 'jquery'
 
@@ -9,6 +9,7 @@ import '../css/budget_analyzer.css';
 
 
 const BudgetAnalyzer = () => {
+    const navigate = useNavigate()
 
     const [selectCategories, setSelectCategories] = useState([]);
     const [selectLocations, setSelectLocations] = useState([]);
@@ -65,13 +66,13 @@ const BudgetAnalyzer = () => {
 
     const handleAnalysis = (e) => {
         e.preventDefault();
-        console.log("event", e)
         localStorage.setItem('filter', JSON.stringify({
             "categories": categories,
             "locations": locations,
             "minBudget": minBudget,
             "maxBudget": maxBudget
         }));
+        navigate('/budget_analysis');
 
     }
     
@@ -103,13 +104,13 @@ const BudgetAnalyzer = () => {
                     <div className="row form-budget">
 
                         <div className="form-group col-md-6">
-                            <label htmlFor="inputEmail4">Min-Budget</label>
+                            <label htmlFor="inputEmail4">Min-Budget ($)</label>
                             <div className="input-container">
                                 <input className="input-input" min="0" type="number" value={minBudget} onChange={onChangeMinBudget} placeholder="Mininum Budget..."/>
                             </div>
                         </div>
                         <div className="form-group col-md-6">
-                            <label htmlFor="inputEmail4">Max-Budget</label>
+                            <label htmlFor="inputEmail4">Max-Budget ($)</label>
                             <div className="input-container">
                                 <input className="input-input" min="0" type="number" value={maxBudget} onChange={onChangeMaxBudget} placeholder="Maxinum Budget..." required />
                             </div>

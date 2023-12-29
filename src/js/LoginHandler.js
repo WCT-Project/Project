@@ -67,7 +67,14 @@ export const LoginProvider = ({ children }) => {
     };
 
     const logout = () => {
-        // Perform logout logic
+        localStorage.setItem('user', JSON.stringify({
+            email: '',
+            id: null,
+            is_admin: false,
+            name: '',
+            password: '',
+            
+        }));
         setIsLoggedIn(false);
         setIsAdmin(false)
     };

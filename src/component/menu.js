@@ -7,6 +7,9 @@ import '../css/menu.css';
 
 function Menu() {
     const location = useLocation();
+    var user = JSON.parse(localStorage.getItem('user'))
+
+    console.log(user)
 
     const {isLoggedIn, isAdmin, userName, login, logout} = useLogin();
     
@@ -56,9 +59,9 @@ function Menu() {
 
                                             <Dropdown.Menu>
                                                 {/* Add dropdown menu items here */}
-                                                <Dropdown.Item href="#/profile">Profile</Dropdown.Item>
+                                                <Dropdown.Item href="/profile">Profile</Dropdown.Item>
                                                 <Dropdown.Divider />
-                                                <Dropdown.Item href="#/logout">Logout</Dropdown.Item>
+                                                <Dropdown.Item onclick={logout}>Logout</Dropdown.Item>
                                             </Dropdown.Menu>
                                         </Dropdown>
                                        
