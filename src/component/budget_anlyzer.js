@@ -13,8 +13,6 @@ const BudgetAnalyzer = () => {
     const [selectCategories, setSelectCategories] = useState([]);
     const [selectLocations, setSelectLocations] = useState([]);
 
-    // const {categories, settingCategories, locations, settingLocations, minBudget, settingMinBudget, maxBudget, settingMaxBudget} = useAnalyzerFilter();
-
     const [categories, setCategories] = useState([]);
     const [locations, setLocations] = useState([]);
     const [minBudget, setMinBudget] = useState(0.00);
@@ -67,6 +65,7 @@ const BudgetAnalyzer = () => {
 
     const handleAnalysis = (e) => {
         e.preventDefault();
+        console.log("event", e)
         localStorage.setItem('filter', JSON.stringify({
             "categories": categories,
             "locations": locations,
@@ -93,11 +92,11 @@ const BudgetAnalyzer = () => {
 
                         <div className="form-group col-md-6">
                             <label htmlFor="inputEmail4">Category</label>
-                            <Select options={selectCategories} onChange={onChangeSelectCategory} placeholder="Breaches, Mountains..."/>
+                            <Select options={selectCategories} onChange={onChangeSelectCategory} placeholder="Breaches, Mountains..." required />
                         </div>
                         <div className="form-group col-md-6">
                             <label htmlFor="inputPassword4">Location</label>
-                            <Select options={selectLocations} onChange={onChangeSelectLocation} placeholder="Phnom Penh, Kompot..."/>
+                            <Select options={selectLocations} onChange={onChangeSelectLocation} placeholder="Phnom Penh, Kompot..." required/>
                         </div>
                         
                     </div>
@@ -112,7 +111,7 @@ const BudgetAnalyzer = () => {
                         <div className="form-group col-md-6">
                             <label htmlFor="inputEmail4">Max-Budget</label>
                             <div className="input-container">
-                                <input className="input-input" min="0" type="number" value={maxBudget} onChange={onChangeMaxBudget} placeholder="Maxinum Budget..."/>
+                                <input className="input-input" min="0" type="number" value={maxBudget} onChange={onChangeMaxBudget} placeholder="Maxinum Budget..." required />
                             </div>
                         </div>
                         

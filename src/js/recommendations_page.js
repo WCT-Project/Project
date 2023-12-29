@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useEffect } from "react";
 import Menu  from "../component/menu";
 import BudgetAnalyzer from '../component/budget_anlyzer';
 import Category from '../component/category';
@@ -10,13 +10,22 @@ import City_Recommend  from "../component/city_recommend";
 
 
 const Recommendation = () => {
+  useEffect(() => {
+      // Reset Filter in local Storage
+      localStorage.setItem('filter', JSON.stringify({
+          "categories": [],
+          "locations": [],
+          "minBudget": 0.00,
+          "maxBudget": 0.00
+      }));
+  }, []);
   return (
-    <div>
+    <>
       <Menu />      
       <body>
         <City_Recommend />
       </body>
-    </div>
+    </>
   );
 };
 

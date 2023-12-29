@@ -10,24 +10,59 @@ function Show_Place_Province() {
 
     const [data, setData] = useState([]);
 
-    function getLocationData() {
-        var filter = localStorage.getItem('filter')
-        $.ajax({
-            url: 'http://127.0.0.1:5000/province/data',
-            type: 'GET',
-            dataType: 'json',
-            success: function (response) {
-                // Update state with fetched data
-                setData(response.data);
-                // if (response) console.log(response.categories)
-            },
-            error: function (error) {
-                console.error('Error:', error);
-            },
-        });
+    async function getLocationData() {
+        var filter = JSON.parse(localStorage.getItem('filter'))
+        var useFilter = false;
+
+        console.log("test===", filter)
+        if (filter['categories'].length || 
+            filter['locations'].length || 
+            filter['minBudget'] || 
+            filter['maxBudget']) {
+                useFilter = true
+            }
+        console.log("test===", useFilter)
+        if (useFilter) {
+            try {
+                const response = await $.ajax({
+                    url: 'http://127.0.0.1:5000/province/data/filtered',
+                    type: 'POST',
+                    dataType: 'json',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        filter: filter
+                    }),
+                });
+                
+                if (response.status) {
+                    console.log("data", response.data)
+                    setData(response.data);
+                }
+                return response
+            } catch (error) {
+                console.error('Something Went Wrong:', error);
+                // setIsLoggedIn(false);
+            }
+        } else {
+            $.ajax({
+                url: 'http://127.0.0.1:5000/province/data',
+                type: 'GET',
+                dataType: 'json',
+                success: function (response) {
+                    // Update state with fetched data
+                    setData(response.data);
+                    // if (response) console.log(response.categories)
+                },
+                error: function (error) {
+                    console.error('Error:', error);
+                },
+            });
+        }
+        
     }
 
     useEffect(() => {
+        console.log("use eff")
         getLocationData();
     }, []); 
 

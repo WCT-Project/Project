@@ -1,13 +1,18 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { useEffect } from 'react';
 
 import Menu from "../component/menu";
 import Login from "../component/Login";
-import Upload from "../component/Upload";
-import Register from "../component/Register";
-
 
 const Register_Form = () => {
-    
+    useEffect(() => {
+        // Reset Filter in local Storage
+        localStorage.setItem('filter', JSON.stringify({
+            "categories": [],
+            "locations": [],
+            "minBudget": 0.00,
+            "maxBudget": 0.00
+        }));
+    }, []);
     return (
         <>
             <Menu />

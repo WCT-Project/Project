@@ -88,8 +88,19 @@
 
 .analysis-button
 {
-    margin-top: 1.5em;
+    margin: 1.5em 0.8em;
     width: 10em;
+}
+
+.analysis-button:hover
+{
+    font-weight: 500;
+    box-shadow: 1px 1px 6px black;
+}
+.analysis-button:active
+{
+    font-weight: 500;
+    box-shadow: 1px 1px 10px black;
 }
 
 .nest-form
