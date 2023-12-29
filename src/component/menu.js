@@ -59,9 +59,9 @@ function Menu() {
 
                                             <Dropdown.Menu>
                                                 {/* Add dropdown menu items here */}
-                                                <Dropdown.Item href="/profile">Profile</Dropdown.Item>
+                                                <Dropdown.Item href="#" className='nest-profile-logout'>Profile</Dropdown.Item>
                                                 <Dropdown.Divider />
-                                                <Dropdown.Item onclick={logout}>Logout</Dropdown.Item>
+                                                <Dropdown.Item onclick={logout} className='nest-profile-logout'>Logout</Dropdown.Item>
                                             </Dropdown.Menu>
                                         </Dropdown>
                                        

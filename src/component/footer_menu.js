@@ -24,7 +24,7 @@ const Footer_menu = () =>{
                     <h3>Contact</h3>
                     <p>Khan Toul Kork/Phnom Penh</p>
                     <p>tripwallet@gmail.com</p>
-                    <p>+855 1234567</p>
+                    <p>+855 69 227 495</p>
                 </div>
                 <div className="nest-footer-col">
                     <h3>Social Media</h3>
