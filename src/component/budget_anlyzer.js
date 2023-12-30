@@ -72,7 +72,7 @@ const BudgetAnalyzer = () => {
             "minBudget": minBudget,
             "maxBudget": maxBudget
         }));
-        navigate('/budget_analysis');
+        window.location.reload();
 
     }
     

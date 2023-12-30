@@ -14,7 +14,6 @@ function Show_Place_Province() {
         var filter = JSON.parse(localStorage.getItem('filter'))
         var useFilter = false;
 
-        console.log("test===", filter)
         if (filter['categories'].length || 
             filter['locations'].length || 
             filter['minBudget'] || 
@@ -36,6 +35,7 @@ function Show_Place_Province() {
                 
                 if (response.status) {
                     setData(response.data);
+                    // window.location.reload();
                 }
                 return response
             } catch (error) {
