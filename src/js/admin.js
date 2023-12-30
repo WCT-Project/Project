@@ -238,7 +238,7 @@ const Admin = () => {
     return (
         <>
             <Menu />
-            <body>
+            <div className='body'>
                 <div className="row">
                     <div className="col-1">
                         <div className="d-flex flex-column flex-shrink-0 bg-light" style={{ width: '4.5rem' }}>
@@ -342,7 +342,7 @@ const Admin = () => {
                                     </div>
                                     
                                 </div>
-                                <table class="table table-striped">
+                                <table className="table table-striped">
                                     <thead>
                                         <tr>
                                             <th scope="col">ID</th>
@@ -430,7 +430,7 @@ const Admin = () => {
                                     </div>
                                     
                                 </div>
-                                <table class="table table-striped">
+                                <table className="table table-striped">
                                     <thead>
                                         <tr>
                                             <th scope="col">ID</th>
@@ -494,7 +494,7 @@ const Admin = () => {
                                 </h4>
                             </div>
                             <div>
-                                <table class="table table-striped">
+                                <table className="table table-striped">
                                     <thead>
                                         <tr>
                                             <th scope="col">ID</th>
@@ -533,7 +533,7 @@ const Admin = () => {
                                 </h4>
                             </div>
                             <div>
-                                <table class="table table-striped">
+                                <table className="table table-striped">
                                     <thead>
                                         <tr>
                                             <th scope="col">ID</th>
@@ -572,7 +572,7 @@ const Admin = () => {
                                 </h4>
                             </div>
                             <div>
-                                <table class="table table-striped">
+                                <table className="table table-striped">
                                     <thead>
                                         <tr>
                                             <th scope="col">ID</th>
@@ -604,7 +604,7 @@ const Admin = () => {
                         </div>
                     </div>
                 </div>
-            </body>
+            </div>
         </>
     );
   };

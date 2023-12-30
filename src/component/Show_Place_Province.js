@@ -60,7 +60,6 @@ function Show_Place_Province() {
     }
 
     useEffect(() => {
-        console.log("use eff")
         getLocationData();
     }, []); 
 

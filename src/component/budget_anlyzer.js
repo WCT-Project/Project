@@ -28,7 +28,7 @@ const BudgetAnalyzer = () => {
             success: function (response) {
                 // Update state with fetched data
                 setSelectLocations(response.provinces);
-                // if (response) console.log(response.categories)
+                // if (response) console.log(response.provinces)
             },
             error: function (error) {
                 console.error('Error:', error);
