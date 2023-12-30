@@ -11,6 +11,7 @@ import Menu from "../component/menu";
 
 
 const Admin = () => {
+    const navigate = useNavigate()
 
     const [categories, setCategories] = useState([]);
     const [locations, setLocations] = useState([]);
@@ -97,6 +98,102 @@ const Admin = () => {
                 console.error('Error:', error);
             },
         });
+    }
+
+    async function create(table, data) {
+        try {
+            const response = await $.ajax({
+                url: `http://127.0.0.1:5000/${table}/create`,
+                type: 'POST',
+                dataType: 'json',
+                contentType: 'application/json',
+                data: JSON.stringify(data),
+            });
+            
+            if (response.status) {
+                window.location.reload();
+            }
+            return response.status
+        } catch (error) {
+            console.error('Something Went Wrong:', error);
+            // setIsLoggedIn(false);
+        }
+    }
+    async function write(table, data) {
+        try {
+            const response = await $.ajax({
+                url: `http://127.0.0.1:5000/${table}/write`,
+                type: 'POST',
+                dataType: 'json',
+                contentType: 'application/json',
+                data: JSON.stringify(data),
+            });
+            
+            if (response.status) {
+                window.location.reload();
+            }
+            return response.status
+        } catch (error) {
+            console.error('Something Went Wrong:', error);
+            // setIsLoggedIn(false);
+        }
+    }
+    async function unlink(table, data) {
+        try {
+            const response = await $.ajax({
+                url: `http://127.0.0.1:5000/${table}/unlink`,
+                type: 'POST',
+                dataType: 'json',
+                contentType: 'application/json',
+                data: JSON.stringify(data),
+            });
+            
+            if (response.status) {
+                window.location.reload();
+            }
+            return response.status
+        } catch (error) {
+            console.error('Something Went Wrong:', error);
+            // setIsLoggedIn(false);
+        }
+    }
+
+    function handleEditCategory(e) {
+        e.preventDefault()
+        
+        var dataset = e.target.dataset;
+        var $form = $('.category-form')
+
+        $form.find('#id').val(dataset.id);
+        $form.find('#name').val(dataset.name);
+        $form.find('#detail').val(dataset.detail);
+        $form.find('#image').val(dataset.image);
+    }
+    function submitCreateEditCategory(e) {
+        e.preventDefault()
+        var $form = $('.category-form')
+        const isCreate = $form.find('#id').val() ? false: true
+        console.log("sub====", e, $form.find('#name').val())
+        var data = {
+            name: $form.find('#name').val(),
+            detail: $form.find('#detail').val(),
+            image: "",
+            image_url: $form.find('#image').val()
+        }
+        if (isCreate) {
+            create('category', data)
+        } else {
+            data['id'] = $form.find('#id').val()
+            write('category', data)
+        }
+    }
+    function handleDeleteCategory(e) {
+        e.preventDefault()
+        const data = {
+            id: e.target.dataset.id
+        }
+        unlink('category', data)
+        
     }
 
     // Use useEffect to call the function when the component mounts
@@ -200,6 +297,21 @@ const Admin = () => {
                                 </h4>
                             </div>
                             <div>
+                                <div className='row'>
+                                    <div className='col-10'>
+
+                                    </div>
+                                    <div className='col-2 text-center'>
+                                        <button className="btn btn-primary" onClick={handleEditCategory}  
+                                                data-bs-toggle="modal" 
+                                                data-bs-target="#categoryModal" 
+                                                data-bs-whatever="@getbootstrap">
+                                            <i className='fa fa-plus mr-1' />
+                                            <span> New</span>
+                                        </button>
+                                    </div>
+                                    
+                                </div>
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
@@ -216,15 +328,54 @@ const Admin = () => {
                                                 <th scope="row">{category.id}</th>
                                                 <td>{category.name}</td>
                                                 <td style={{fontSize: '12px'}}>{category.detail}</td>
-                                                <td style={{fontSize: '12px'}}>{category.image_url || category.image }</td>
+                                                <td style={{fontSize: '12px'}}>{category.image_url || category.image}</td>
                                                 <td>
-                                                    <button className="inline-button" data-id={category.id}><i className="fa fa-wrench"/></button>
-                                                    <button className="inline-button" data-id={category.id}><i className="fa fa-trash"/></button>
+                                                    <button className="inline-button" onClick={handleEditCategory}  
+                                                            data-bs-toggle="modal" 
+                                                            data-bs-target="#categoryModal" 
+                                                            data-bs-whatever="@getbootstrap"
+                                                            data-id={category.id} data-name={category.name} data-detail={category.detail} data-image={category.image_url || category.image}>
+                                                        <i className="fa fa-wrench" data-id={category.id} data-name={category.name} data-detail={category.detail} data-image={category.image_url || category.image}/>
+                                                    </button>
+                                                    <button className="inline-button" data-id={category.id} onClick={handleDeleteCategory}><i className="fa fa-trash" data-id={category.id}/></button>
                                                 </td>
                                             </tr>
                                         ))}  
                                     </tbody>
                                 </table>
+
+                                <div className="modal fade" id="categoryModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div className="modal-dialog">
+                                        <div className="modal-content">
+                                            <div className="modal-header">
+                                                <h5 className="modal-title" id="exampleModalLabel">Category</h5>
+                                                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div className="modal-body">
+                                                <form className='category-form' onSubmit={submitCreateEditCategory}>
+                                                    <div className="mb-3 d-none">
+                                                        <input type="text" className="form-control" id="id" placeholder="ID"/>
+                                                    </div>
+                                                    <div className="mb-3">
+                                                        <input type="text" className="form-control" id="name" placeholder="Category" required/>
+                                                    </div>
+                                                    <div className="mb-3">
+                                                        <input type="text" className="form-control" id="detail" placeholder="Detail" required/>
+                                                    </div>
+                                                    <div className="mb-3">
+                                                        <input type="text" className="form-control" id="image" placeholder="Image" required/>
+                                                    </div>
+                                                    <div className="modal-footer">
+                                                        <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                        <button type="submit" className="btn btn-primary">Save</button>
+                                                    </div>
+                                                    
+                                                </form>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div className="tab-pane fade" id="location-config" role="tabpanel" aria-labelledby="pills-profile-tab">
