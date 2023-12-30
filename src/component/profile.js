@@ -6,6 +6,8 @@ import btb from '../img/battambang.jpg'
 
 function Profile(props) {
 
+    var storedUser = JSON.parse(localStorage.getItem('user'))
+
     const {userName, email} = useLogin();
 
 
@@ -13,8 +15,8 @@ function Profile(props) {
         <div className="popup">
             <div className="second-popup">
                 <img src={btb} className="image-of-profile"></img>
-                <h3 className="username">{userName}</h3>
-                <p className="email">{email}</p>
+                <h3 className="username">{userName || storedUser.name}</h3>
+                <p className="email">{storedUser.email || email}</p>
                 <div className="popup-inner">
                     <button className="close-opup-btn" onClick={() => props.setTrigger(false)}>
                         Close

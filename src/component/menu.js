@@ -3,7 +3,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import { useLogin } from '../js/LoginHandler';
 import '../css/menu.css';
 import Profile from './profile';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 
 function Menu() {
@@ -12,6 +12,7 @@ function Menu() {
     var storedUser = JSON.parse(localStorage.getItem('user'))
     var storedIsLoggedIn = false;
     var storedIsAdmin = false;
+
 
     const [buttonProfile, setProfile] = useState(false);
 
@@ -72,6 +73,7 @@ function Menu() {
                                             <Dropdown.Menu>
                                                 {/* Add dropdown menu items here */}
                                                 <Dropdown.Item className='nest-profile-logout' onClick={() => setProfile(true)}>Profile</Dropdown.Item>
+                                                <Profile trigger={buttonProfile} setTrigger={setProfile}></Profile>
                                                 <Dropdown.Divider />
                                                 <Dropdown.Item onClick={handleLogout} className='nest-profile-logout'>Logout</Dropdown.Item>
                                             </Dropdown.Menu>
@@ -82,7 +84,7 @@ function Menu() {
                                         </Link>
                                     )
                                 }
-                                <Profile trigger={buttonProfile} setTrigger={setProfile}></Profile>
+                                
                             </li>
                         </ul>
                     </div>
