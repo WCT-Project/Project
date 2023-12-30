@@ -49,7 +49,12 @@ export const LoginProvider = ({ children }) => {
     
             if (response.status) {
                 var user = response.user;
-                localStorage.setItem('user', JSON.stringify(response.user));
+                localStorage.setItem('user', JSON.stringify({
+                    'email': response.user.email,
+                    'id': response.user.id,
+                    'is_admin': response.user.is_admin,
+                    'name': response.user.name
+                }));
                 setIsLoggedIn(true);
                 setIsAdmin(user.is_admin);
                 setUserName(user.name);
@@ -72,7 +77,6 @@ export const LoginProvider = ({ children }) => {
             id: null,
             is_admin: false,
             name: '',
-            password: '',
             
         }));
         setIsLoggedIn(false);
