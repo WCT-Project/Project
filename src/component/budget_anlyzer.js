@@ -75,6 +75,17 @@ const BudgetAnalyzer = () => {
         window.location.reload();
 
     }
+    const handleReset = (e) => {
+        e.preventDefault();
+        localStorage.setItem('filter', JSON.stringify({
+            "categories": [],
+            "locations": [],
+            "minBudget": 0.00,
+            "maxBudget": 0.00
+        }));
+        window.location.reload();
+
+    }
     
     // Use useEffect to call the function when the component mounts
     useEffect(() => {
@@ -121,6 +132,11 @@ const BudgetAnalyzer = () => {
                     <span className='span-analysis-button'>
                         <button type="submit" className="btn btn-primary analysis-button">
                             Analysis
+                        </button>
+                    </span>
+                    <span className='span-analysis-button'>
+                        <button type="button" className="btn btn-secondary" onClick={handleReset}>
+                            Reset
                         </button>
                     </span>
                 </form>

@@ -173,7 +173,6 @@ const Admin = () => {
         e.preventDefault()
         var $form = $('.category-form')
         const isCreate = $form.find('#id').val() ? false: true
-        console.log("sub====", e, $form.find('#name').val())
         var data = {
             name: $form.find('#name').val(),
             detail: $form.find('#detail').val(),
@@ -195,7 +194,38 @@ const Admin = () => {
         unlink('category', data)
         
     }
+    function submitCreateEditlocation(e) {
+        e.preventDefault()
+        var $form = $('.location-form')
+        const isCreate = $form.find('#id').val() ? false: true
+        var data = {
+            name: $form.find('#name').val(),            
+        }
+        if (isCreate) {
+            create('province', data)
+        } else {
+            data['id'] = $form.find('#id').val()
+            write('province', data)
+        }
+    }
+    function handleDeleteLocation(e) {
+        e.preventDefault()
+        const data = {
+            id: e.target.dataset.id
+        }
+        unlink('province', data)
+        
+    }
+    function handleEditlocation(e) {
+        e.preventDefault()
+        
+        var dataset = e.target.dataset;
+        var $form = $('.location-form')
 
+        $form.find('#id').val(dataset.id);
+        $form.find('#name').val(dataset.name);
+    
+    }
     // Use useEffect to call the function when the component mounts
     useEffect(() => {
         getCategories();
@@ -385,6 +415,21 @@ const Admin = () => {
                                 </h4>
                             </div>
                             <div>
+                                <div className='row'>
+                                    <div className='col-10'>
+
+                                    </div>
+                                    <div className='col-2 text-center'>
+                                        <button className="btn btn-primary" onClick={handleEditlocation}  
+                                                data-bs-toggle="modal" 
+                                                data-bs-target="#locationModal" 
+                                                data-bs-whatever="@getbootstrap">
+                                            <i className='fa fa-plus mr-1' />
+                                            <span> New</span>
+                                        </button>
+                                    </div>
+                                    
+                                </div>
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
@@ -400,13 +445,46 @@ const Admin = () => {
                                                 <th scope="row">{category.id}</th>
                                                 <td>{category.name}</td>
                                                 <td>
-                                                    <button className="inline-button" data-id={category.id}><i className="fa fa-wrench"/></button>
-                                                    <button className="inline-button" data-id={category.id}><i className="fa fa-trash"/></button>
+                                                    <button className="inline-button" onClick={handleEditlocation}  
+                                                            data-bs-toggle="modal" 
+                                                            data-bs-target="#locationModal" 
+                                                            data-bs-whatever="@getbootstrap"
+                                                            data-id={category.id} data-name={category.name}>
+                                                        <i className="fa fa-wrench" data-id={category.id} data-name={category.name}/>
+                                                    </button>
+                                                    <button className="inline-button" data-id={category.id} onClick={handleDeleteLocation}><i className="fa fa-trash" data-id={category.id}/></button>
                                                 </td>
                                             </tr>
                                         ))}  
                                     </tbody>
                                 </table>
+                                <div className="modal fade" id="locationModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div className="modal-dialog">
+                                        <div className="modal-content">
+                                            <div className="modal-header">
+                                                <h5 className="modal-title" id="exampleModalLabel">Location</h5>
+                                                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div className="modal-body">
+                                                <form className='location-form' onSubmit={submitCreateEditlocation}>
+                                                    <div className="mb-3 d-none">
+                                                        <input type="text" className="form-control" id="id" placeholder="ID"/>
+                                                    </div>
+                                                    <div className="mb-3">
+                                                        <input type="text" className="form-control" id="name" placeholder="Location" required/>
+                                                    </div>
+                                                    
+                                                    <div className="modal-footer">
+                                                        <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                        <button type="submit" className="btn btn-primary">Save</button>
+                                                    </div>
+                                                    
+                                                </form>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div className="tab-pane fade" id="place-config" role="tabpanel" aria-labelledby="pills-profile-tab">

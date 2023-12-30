@@ -20,7 +20,6 @@ function Show_Place_Province() {
             filter['maxBudget']) {
                 useFilter = true
             }
-        console.log("test===", useFilter)
         if (useFilter) {
             try {
                 const response = await $.ajax({
@@ -94,8 +93,9 @@ function Show_Place_Province() {
                                             <img src={item.image_url || item.image} className="card-img-top" alt="..." />
                                             <div className="card-body">
                                                 <h5 className="card-title">{item.name}</h5>
+                                                <p>Budget: ${item.price}</p>
                                                 <p className="card-text">{item.detail}</p>
-                                                <p>Budget: $ {item.price}</p>
+                                                
                                             </div>
                                         </div>
                                     ))}
@@ -111,8 +111,8 @@ function Show_Place_Province() {
                                             <img src={acco_item.image_url || acco_item.image} className="card-img-top" alt="..." />
                                             <div className="card-body">
                                                 <h5 className="card-title">{acco_item.name}</h5>
+                                                <p>Budget: ${acco_item.price}</p>
                                                 <p className="card-text">{acco_item.detail}</p>
-                                                <p>Budget: $ {acco_item.price}</p>
                                             </div>
                                         </div>
                                     ))}
@@ -127,8 +127,8 @@ function Show_Place_Province() {
                                             <img src={trnp_item.image_url || trnp_item.image} className="card-img-top" alt="..." />
                                             <div className="card-body">
                                                 <h5 className="card-title">{trnp_item.name}</h5>
-                                                <p className="card-text">{trnp_item.detail}$</p>
                                                 <p>Budget: $ {trnp_item.price}</p>
+                                                <p className="card-text">{trnp_item.detail}$</p>
                                             </div>
                                         </div>
                                     ))}
@@ -139,134 +139,6 @@ function Show_Place_Province() {
                         </div>
                     </div>
                 ))}
-                {/* <div className="nest-beach-boxshow">
-                    <div>
-                        <h4 className="main-caption caption-category">Province Name</h4>
-                    </div>
-                    <ul class="nav nav-pills mb-4" id="pills-tab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#sbotton1" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Option 1</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#sbotton2" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Option 2</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#sbotton3" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Option 3</button>
-                        </li>
-                    </ul>
-                    <div class="tab-content" id="pills-tabContent">
-                        <div class="tab-pane fade show active" id="sbotton1" role="tabpanel" aria-labelledby="pills-home-tab">
-                            pills-home
-                            <div className="show-category">
-                                <div className="card" style={{ width: '18rem' }}>
-                                    <img src={landscape1} className="card-img-top" alt="..." />
-                                    <div className="card-body">
-                                        <h5 className="card-title">Card title</h5>
-                                        <p className="card-text">Budget: </p>
-                                    </div>
-                                </div>
-                                <div className="card" style={{ width: '18rem' }}>
-                                    <img src={landscape1} className="card-img-top" alt="..." />
-                                    <div className="card-body">
-                                        <h5 className="card-title">Card title</h5>
-                                        <p className="card-text">Budget: </p>
-                                    </div>
-                                </div>
-                                <div className="card" style={{ width: '18rem' }}>
-                                    <img src={landscape1} className="card-img-top" alt="..." />
-                                    <div className="card-body">
-                                        <h5 className="card-title">Card title</h5>
-                                        <p className="card-text">Budget: </p>
-                                    </div>
-                                </div>
-                                <div className="card" style={{ width: '18rem' }}>
-                                    <img src={landscape1} className="card-img-top justify-start" alt="..." />
-                                    <div className="card-body">
-                                        <h5 className="card-title">Card title</h5>
-                                        <p className="card-text"></p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="tab-pane fade" id="sbotton2" role="tabpanel" aria-labelledby="pills-profile-tab">
-
-                            <div className="show-category">
-                                <div className="card" style={{ width: '18rem' }}>
-                                    <img src={landscape1} className="card-img-top" alt="..." />
-                                    <div className="card-body">
-                                        <h5 className="card-title">Card title</h5>
-                                        <p className="card-text">Budget: </p>
-                                    </div>
-                                </div>
-                                <div className="card" style={{ width: '18rem' }}>
-                                    <img src={landscape1} className="card-img-top" alt="..." />
-                                    <div className="card-body">
-                                        <h5 className="card-title">Card title</h5>
-                                        <p className="card-text">Budget: </p>
-                                    </div>
-                                </div>
-                                <div className="card" style={{ width: '18rem' }}>
-                                    <img src={landscape1} className="card-img-top" alt="..." />
-                                    <div className="card-body">
-                                        <h5 className="card-title">Card title</h5>
-                                        <p className="card-text">Budget: </p>
-                                    </div>
-                                </div>
-                                <div className="card" style={{ width: '18rem' }}>
-                                    <img src={landscape1} className="card-img-top justify-start" alt="..." />
-                                    <div className="card-body">
-                                        <h5 className="card-title">Card title</h5>
-                                        <p className="card-text"></p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </div>
-                        <div class="tab-pane fade" id="sbotton3" role="tabpanel" aria-labelledby="pills-contact-tab">
-                            
-                            <div className="show-category">
-                                <div className="card" style={{ width: '18rem' }}>
-                                    <img src={landscape1} className="card-img-top" alt="..." />
-                                    <div className="card-body">
-                                        <h5 className="card-title">Card title</h5>
-                                        <p className="card-text">d on the card title and make up the bulk of the card's content.</p>
-                                    </div>
-                                </div>
-                                <div className="card" style={{ width: '18rem' }}>
-                                    <img src={landscape1} className="card-img-top" alt="..." />
-                                    <div className="card-body">
-                                        <h5 className="card-title">Card title</h5>
-                                        <p className="card-text">Budget: </p>
-                                    </div>
-                                </div>
-                                <div className="card" style={{ width: '18rem' }}>
-                                    <img src={landscape1} className="card-img-top" alt="..." />
-                                    <div className="card-body">
-                                        <h5 className="card-title">Card title</h5>
-                                        <p className="card-text">Budget: </p>
-                                    </div>
-                                </div>
-                                <div className="card" style={{ width: '18rem' }}>
-                                    <img src={landscape1} className="card-img-top justify-start" alt="..." />
-                                    <div className="card-body">
-                                        <h5 className="card-title">Card title</h5>
-                                        <p className="card-text"></p>
-                                    </div>
-                                </div>
-                                <div className="card" style={{ width: '18rem' }}>
-                                    <img src={landscape1} className="card-img-top" alt="..." />
-                                    <div className="card-body">
-                                        <h5 className="card-title">Card title</h5>
-                                        <p className="card-text">Budget: </p>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-                </div> */}
 
             </div>
         </article>
