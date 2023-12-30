@@ -14,10 +14,10 @@ const Footer_menu = () =>{
                     <h3>About</h3>
                     <p>The webstie can analys your budget for joing a trip with the best estimate price and quality of place</p>
                     <div className="nest-icon-footer">
-                        <a href='https://fontawesome.com/search?q=you&o=r'><img src={facebook}></img></a>
-                        <a><img src={github}></img></a>
-                        <a><img src={youtube}></img></a>
-                        <a><img src={tiktok}></img></a>
+                        <a href='https://www.facebook.com/profile.php?id=100065175015705'><img src={facebook} className="icon-footer"></img></a>
+                        <a href="https://github.com/CSTVann"><img src={github} className="icon-footer"></img></a>
+                        <a><img src={youtube} className="icon-footer"></img></a>
+                        <a><img src={tiktok} className="icon-footer"></img></a>
                     </div>
                 </div>
                 <div className="nest-footer-col">

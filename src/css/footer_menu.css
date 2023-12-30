@@ -45,3 +45,17 @@
     margin-left: 1em;
     margin-right: 1em;
 }
+
+.icon-footer:hover,
+.icon-footer:focus{
+    width:25px;
+    height: 25px;
+}
+.icon-footer {
+    /* Set the initial size */
+    width: 20px;
+    height: 20px;
+  
+    /* Apply a transition for the width and height properties */
+    transition: width 0.2s ease, height 0.2s ease;
+}
