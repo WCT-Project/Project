@@ -36,3 +36,30 @@
     transform: rotate(360deg);
   }
 }
+
+
+.btn-primary {
+    border-radius: 25px;
+    background-color: #2e3a32;
+    border-color: #2e3a32;
+}
+.btn-primary:hover {
+    font-weight: 500;
+    box-shadow: 1px 1px 3px black;
+}
+.btn-primary:active {
+    font-weight: 500;
+    box-shadow: 1px 1px 4px black;
+}
+.btn-secondary {
+    color: black;
+    background-color: white;
+    border-radius: 25px;
+    border-radius: 25px;
+    background-color: white;
+    border-color: #2e3a32;
+
+}
+.btn-secondary:hover {
+  background-color: #282c34;
+}
