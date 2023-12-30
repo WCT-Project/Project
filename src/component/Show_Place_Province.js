@@ -35,7 +35,6 @@ function Show_Place_Province() {
                 });
                 
                 if (response.status) {
-                    console.log("data", response.data)
                     setData(response.data);
                 }
                 return response
