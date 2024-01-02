@@ -298,6 +298,7 @@ const Admin = () => {
                                         role="tab"
                                         aria-controls="pills-home"
                                         aria-selected="true"
+                                        title="Categories"
                                         >
                                             <i className="fa fa-picture-o admin-icon" />
                                     </button>
@@ -312,6 +313,7 @@ const Admin = () => {
                                         role="tab"
                                         aria-controls="pills-home"
                                         aria-selected="false"
+                                        title="Locations"
                                         >
                                             <i className="fa fa-map admin-icon" />
                                     </button>
@@ -326,6 +328,7 @@ const Admin = () => {
                                         role="tab"
                                         aria-controls="pills-home"
                                         aria-selected="false"
+                                        title="Places"
                                         >
                                             <i className="fa fa-map-marker admin-icon" />
                                     </button>
@@ -333,7 +336,6 @@ const Admin = () => {
                                 <li>
                                     <button
                                         className="nav-link py-3 border-bottom"
-                                        title=""
                                         id="pills-contact-tab"
                                         data-bs-toggle="pill"
                                         data-bs-target="#accomodation-config"
@@ -341,6 +343,7 @@ const Admin = () => {
                                         role="tab"
                                         aria-controls="pills-home"
                                         aria-selected="false"
+                                        title="Accomodations"
                                         >
                                             <i className="fa fa-bed admin-icon" />
                                     </button>
@@ -355,6 +358,7 @@ const Admin = () => {
                                         role="tab"
                                         aria-controls="pills-home"
                                         aria-selected="false"
+                                        title="Transportations"
                                     >
                                     <i className="fa fa-car admin-icon" />
                                     </button>
