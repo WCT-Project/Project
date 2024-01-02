@@ -237,6 +237,7 @@ const Admin = () => {
         $form.find('#id').val(dataset.id);
         $form.find('#name').val(dataset.name);
         $form.find('#price').val(dataset.price);
+        $form.find('#province_id').val(dataset.province_id);
         $form.find('#detail').val(dataset.detail);
         $form.find('#image').val(dataset.image);
     }
@@ -247,6 +248,7 @@ const Admin = () => {
         var data = {
             name: $form.find('#name').val(),
             price: $form.find('#price').val(),
+            province_id: $form.find('#province_id').val(),
             detail: $form.find('#detail').val(),
             image: "",
             image_url: $form.find('#image').val()
@@ -568,7 +570,7 @@ const Admin = () => {
                                                 <th scope="row">{place.id}</th>
                                                 <td>{place.name}</td>
                                                 <td>${place.price}</td>
-                                                <td>{place.province_id}</td>
+                                                <td width="12%">{place.province_id}</td>
                                                 <td style={{fontSize: '12px'}}>{place.detail}</td>
                                                 <td style={{fontSize: '12px'}}>{place.image_url || place.image }</td>
                                                 <td>
@@ -576,8 +578,8 @@ const Admin = () => {
                                                             data-bs-toggle="modal" 
                                                             data-bs-target="#placeModal" 
                                                             data-bs-whatever="@getbootstrap"
-                                                            data-id={place.id} data-name={place.name} data-price={place.price} data-detail={place.detail} data-image={place.image_url || place.image}>
-                                                        <i className="fa fa-wrench" data-id={place.id} data-name={place.name} data-price={place.price} data-detail={place.detail} data-image={place.image_url || place.image}/>
+                                                            data-id={place.id} data-name={place.name} data-price={place.price} data-province_id={place.province_id} data-detail={place.detail} data-image={place.image_url || place.image}>
+                                                        <i className="fa fa-wrench" data-id={place.id} data-name={place.name} data-price={place.price} data-province_id={place.province_id} data-detail={place.detail} data-image={place.image_url || place.image}/>
                                                     </button>
                                                     <button className="inline-button" data-id={place.id} onClick={handleDeletePlace}><i className="fa fa-trash" data-id={place.id}/></button>
                                                 </td>
@@ -602,6 +604,9 @@ const Admin = () => {
                                                     </div>
                                                     <div className="mb-3">
                                                         <input type="number" className="form-control" id="price" placeholder="Price" required/>
+                                                    </div>
+                                                    <div className="mb-3">
+                                                        <input type="number" className="form-control" id="province_id" placeholder="Province ID" required/>
                                                     </div>
                                                     <div className="mb-3">
                                                         <input type="text" className="form-control" id="detail" placeholder="Detail" required/>
@@ -635,7 +640,7 @@ const Admin = () => {
                                             <th scope="col">ID</th>
                                             <th scope="col">Accommodation</th>
                                             <th scope="col">Price</th>
-                                            <th scope="col">Province ID</th>
+                                            <th width="12%" scope="col">Province ID</th>
                                             <th scope="col">Detail</th>
                                             <th scope="col">Image</th>
                                             <th></th>
