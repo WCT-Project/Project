@@ -269,6 +269,88 @@ const Admin = () => {
         
     }
 
+    // ===Accommodations===
+    function handleEditAccomodation(e) {
+        e.preventDefault()
+        
+        var dataset = e.target.dataset;
+        var $form = $('.accomodation-form')
+
+        $form.find('#id').val(dataset.id);
+        $form.find('#name').val(dataset.name);
+        $form.find('#price').val(dataset.price);
+        $form.find('#province_id').val(dataset.province_id);
+        $form.find('#detail').val(dataset.detail);
+        $form.find('#image').val(dataset.image);
+    }
+    function submitCreateEditAccomodation(e) {
+        e.preventDefault()
+        var $form = $('.accomodation-form')
+        const isCreate = $form.find('#id').val() ? false: true
+        var data = {
+            name: $form.find('#name').val(),
+            price: $form.find('#price').val(),
+            province_id: $form.find('#province_id').val(),
+            detail: $form.find('#detail').val(),
+            image: "",
+            image_url: $form.find('#image').val()
+        }
+        if (isCreate) {
+            create('accomodation', data)
+        } else {
+            data['id'] = $form.find('#id').val()
+            write('accomodation', data)
+        }
+    }
+    function handleDeleteAccomodation(e) {
+        e.preventDefault()
+        const data = {
+            id: e.target.dataset.id
+        }
+        unlink('accomodation', data)
+        
+    }
+
+    // ===Transportation===
+    function handleEditTransportation(e) {
+        e.preventDefault()
+        
+        var dataset = e.target.dataset;
+        var $form = $('.transportation-form')
+
+        $form.find('#id').val(dataset.id);
+        $form.find('#name').val(dataset.name);
+        $form.find('#price').val(dataset.price);
+        $form.find('#detail').val(dataset.detail);
+        $form.find('#image').val(dataset.image);
+    }
+    function submitCreateEditTransportation(e) {
+        e.preventDefault()
+        var $form = $('.transportation-form')
+        const isCreate = $form.find('#id').val() ? false: true
+        var data = {
+            name: $form.find('#name').val(),
+            price: $form.find('#price').val(),
+            detail: $form.find('#detail').val(),
+            image: "",
+            image_url: $form.find('#image').val()
+        }
+        if (isCreate) {
+            create('transportation', data)
+        } else {
+            data['id'] = $form.find('#id').val()
+            write('transportation', data)
+        }
+    }
+    function handleDeleteTransportation(e) {
+        e.preventDefault()
+        const data = {
+            id: e.target.dataset.id
+        }
+        unlink('transportation', data)
+        
+    }
+
     // Use useEffect to call the function when the component mounts
     useEffect(() => {
         getCategories();
@@ -541,7 +623,7 @@ const Admin = () => {
                                 </h4>
                             </div>
                             <div>
-                            <div className='row'>
+                                <div className='row'>
                                     <div className='col-10'>
 
                                     </div>
@@ -638,6 +720,20 @@ const Admin = () => {
                                 </h4>
                             </div>
                             <div>
+                                <div className='row'>
+                                    <div className='col-10'>
+
+                                    </div>
+                                    <div className='col-2 text-center'>
+                                        <button className="btn btn-primary" onClick={handleEditAccomodation}  
+                                                data-bs-toggle="modal" 
+                                                data-bs-target="#accomodationModal" 
+                                                data-bs-whatever="@getbootstrap">
+                                            <i className='fa fa-plus mr-1' />
+                                            <span> New</span>
+                                        </button>
+                                    </div>  
+                                </div>
                                 <table className="table table-striped">
                                     <thead>
                                         <tr>
@@ -652,22 +748,66 @@ const Admin = () => {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {accomodations.map((category) => (
+                                        {accomodations.map((accomodation) => (
                                             <tr>
-                                                <th scope="row">{category.id}</th>
-                                                <td>{category.name}</td>
-                                                <td>${category.price}</td>
-                                                <td>{category.province_id}</td>
-                                                <td style={{fontSize: '12px'}}>{category.detail}</td>
-                                                <td style={{fontSize: '12px'}}>{category.image_url || category.image }</td>
+                                                <th scope="row">{accomodation.id}</th>
+                                                <td>{accomodation.name}</td>
+                                                <td>${accomodation.price}</td>
+                                                <td width="12%">{accomodation.province_id}</td>
+                                                <td style={{fontSize: '12px'}}>{accomodation.detail}</td>
+                                                <td style={{fontSize: '12px'}}>{accomodation.image_url || accomodation.image }</td>
                                                 <td>
-                                                    <button className="inline-button" data-id={category.id}><i className="fa fa-wrench"/></button>
-                                                    <button className="inline-button" data-id={category.id}><i className="fa fa-trash"/></button>
+                                                    <button className="inline-button" onClick={handleEditAccomodation}  
+                                                            data-bs-toggle="modal" 
+                                                            data-bs-target="#accomodationModal" 
+                                                            data-bs-whatever="@getbootstrap"
+                                                            data-id={accomodation.id} data-name={accomodation.name} data-price={accomodation.price} data-province_id={accomodation.province_id} data-detail={accomodation.detail} data-image={accomodation.image_url || accomodation.image}>
+                                                        <i className="fa fa-wrench" data-id={accomodation.id} data-name={accomodation.name} data-price={accomodation.price} data-province_id={accomodation.province_id} data-detail={accomodation.detail} data-image={accomodation.image_url || accomodation.image}/>
+                                                    </button>                                                    
+                                                    <button className="inline-button" data-id={accomodation.id} onClick={handleDeleteAccomodation}><i className="fa fa-trash" data-id={accomodation.id}/></button>
                                                 </td>
                                             </tr>
                                         ))}  
                                     </tbody>
                                 </table>
+                                <div className="modal fade" id="accomodationModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div className="modal-dialog">
+                                        <div className="modal-content">
+                                            <div className="modal-header">
+                                                <h5 className="modal-title" id="exampleModalLabel">Accomodation</h5>
+                                                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div className="modal-body">
+                                                <form className='accomodation-form' onSubmit={submitCreateEditAccomodation}>
+                                                    <div className="mb-3 d-none">
+                                                        <input type="text" className="form-control" id="id" placeholder="ID"/>
+                                                    </div>
+                                                    <div className="mb-3">
+                                                        <input type="text" className="form-control" id="name" placeholder="Accomodation" required/>
+                                                    </div>
+                                                    <div className="mb-3">
+                                                        <input type="number" className="form-control" id="price" placeholder="Price" required/>
+                                                    </div>
+                                                    <div className="mb-3">
+                                                        <input type="number" className="form-control" id="province_id" placeholder="Province ID" required/>
+                                                    </div>
+                                                    <div className="mb-3">
+                                                        <input type="text" className="form-control" id="detail" placeholder="Detail" required/>
+                                                    </div>
+                                                    <div className="mb-3">
+                                                        <input type="text" className="form-control" id="image" placeholder="Image" required/>
+                                                    </div>
+                                                    <div className="modal-footer">
+                                                        <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                        <button type="submit" className="btn btn-primary">Save</button>
+                                                    </div>
+                                                    
+                                                </form>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div className="tab-pane fade" id="transportation-config" role="tabpanel" aria-labelledby="pills-profile-tab">
@@ -677,6 +817,20 @@ const Admin = () => {
                                 </h4>
                             </div>
                             <div>
+                                <div className='row'>
+                                    <div className='col-10'>
+
+                                    </div>
+                                    <div className='col-2 text-center'>
+                                        <button className="btn btn-primary" onClick={handleEditTransportation}  
+                                                data-bs-toggle="modal" 
+                                                data-bs-target="#transportationModal" 
+                                                data-bs-whatever="@getbootstrap">
+                                            <i className='fa fa-plus mr-1' />
+                                            <span> New</span>
+                                        </button>
+                                    </div>  
+                                </div>
                                 <table className="table table-striped">
                                     <thead>
                                         <tr>
@@ -690,21 +844,62 @@ const Admin = () => {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {transportations.map((category) => (
+                                        {transportations.map((transportation) => (
                                             <tr>
-                                                <th scope="row">{category.id}</th>
-                                                <td>{category.name}</td>
-                                                <td>${category.price}</td>
-                                                <td style={{fontSize: '12px'}}>{category.detail}</td>
-                                                <td style={{fontSize: '12px'}}>{category.image_url || category.image }</td>
+                                                <th scope="row">{transportation.id}</th>
+                                                <td>{transportation.name}</td>
+                                                <td>${transportation.price}</td>
+                                                <td style={{fontSize: '12px'}}>{transportation.detail}</td>
+                                                <td style={{fontSize: '12px'}}>{transportation.image_url || transportation.image }</td>
                                                 <td>
-                                                    <button className="inline-button" data-id={category.id}><i className="fa fa-wrench"/></button>
-                                                    <button className="inline-button" data-id={category.id}><i className="fa fa-trash"/></button>
+                                                    <button className="inline-button" onClick={handleEditTransportation}  
+                                                            data-bs-toggle="modal" 
+                                                            data-bs-target="#transportationModal" 
+                                                            data-bs-whatever="@getbootstrap"
+                                                            data-id={transportation.id} data-name={transportation.name} data-price={transportation.price} data-detail={transportation.detail} data-image={transportation.image_url || transportation.image}>
+                                                        <i className="fa fa-wrench" data-id={transportation.id} data-name={transportation.name} data-price={transportation.price} data-detail={transportation.detail} data-image={transportation.image_url || transportation.image}/>
+                                                    </button>   
+                                                    <button className="inline-button" data-id={transportation.id} onClick={handleDeleteTransportation}><i className="fa fa-trash" data-id={transportation.id}/></button>
                                                 </td>
                                             </tr>
                                         ))}  
                                     </tbody>
                                 </table>
+                                <div className="modal fade" id="transportationModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div className="modal-dialog">
+                                        <div className="modal-content">
+                                            <div className="modal-header">
+                                                <h5 className="modal-title" id="exampleModalLabel">Transportation</h5>
+                                                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div className="modal-body">
+                                                <form className='transportation-form' onSubmit={submitCreateEditTransportation}>
+                                                    <div className="mb-3 d-none">
+                                                        <input type="text" className="form-control" id="id" placeholder="ID"/>
+                                                    </div>
+                                                    <div className="mb-3">
+                                                        <input type="text" className="form-control" id="name" placeholder="Transportation" required/>
+                                                    </div>
+                                                    <div className="mb-3">
+                                                        <input type="number" className="form-control" id="price" placeholder="Price" required/>
+                                                    </div>
+                                                    <div className="mb-3">
+                                                        <input type="text" className="form-control" id="detail" placeholder="Detail" required/>
+                                                    </div>
+                                                    <div className="mb-3">
+                                                        <input type="text" className="form-control" id="image" placeholder="Image" required/>
+                                                    </div>
+                                                    <div className="modal-footer">
+                                                        <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                        <button type="submit" className="btn btn-primary">Save</button>
+                                                    </div>
+                                                    
+                                                </form>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
