@@ -40,9 +40,21 @@ function Menu() {
             <nav className="navbar navbar-expand-lg navbar-light bg-light border-header" id="dynamic-nav">
                 <div className="container-fluid menu-container">
                     {isAdmin || storedIsAdmin ? (
-                        <Link to="/admin" className="navbar-brand" href="#"><b><span>Trip</span><span>Wallet</span></b></Link>
+                        <Link to="/admin" className="navbar-brand" href="#"><b>
+                            <span>
+                                <span className='span-h1'> 
+                                    <span>Trip</span> <span>Wallet</span>
+                                </span>
+                            </span>
+                        </b></Link>
                     ) : (
-                        <Link to="/" className="navbar-brand" href="#"><b><span>Trip</span><span>Wallet</span></b></Link>
+                        <Link to="/" className="navbar-brand" href="#"><b>
+                            <span>
+                                <span className='span-h1'>
+                                    <span>Trip</span> <span>Wallet</span>
+                                </span>
+                            </span>
+                        </b></Link>
                     )}
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
