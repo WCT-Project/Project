@@ -14,7 +14,7 @@ function Menu() {
     var storedIsAdmin = false;
 
 
-    const [buttonProfile, setProfile] = useState(false);
+    const [buttonProfile, setProfile] = useState(true);
 
     if (storedUser.email || storedUser.name) {
         storedIsLoggedIn = true;
@@ -84,7 +84,6 @@ function Menu() {
                                             </Dropdown.Toggle>
                                             <Dropdown.Menu>
                                                 {/* Add dropdown menu items here */}
-                                                <Dropdown.Item className='nest-profile-logout' onClick={() => setProfile(true)}>Profile</Dropdown.Item>
                                                 <Profile trigger={buttonProfile} setTrigger={setProfile}></Profile>
                                                 <Dropdown.Divider />
                                                 <Dropdown.Item onClick={handleLogout} className='nest-profile-logout'>Logout</Dropdown.Item>
