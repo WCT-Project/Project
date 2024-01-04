@@ -16,14 +16,17 @@ export default class SimpleSlider extends Component {
   render() {
     const settings = {
       dots: true,
+      arrows: true,
+      autoplay: true,
       infinite: true,
       speed: 1500,
+      autoplaySpeed: 3000,
       slidesToShow: 1,
       slidesToScroll: 1
     };
    
     return (
-        <div>
+        <div style={{overflow: "hidden"}}>
             <Slider {...settings}>
                 <div className="banner-item">
                   <div className="nest-item-banner">

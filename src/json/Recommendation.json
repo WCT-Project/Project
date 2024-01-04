@@ -5,14 +5,16 @@
                 "title" : "Tuol Sleng Genocide Museum",
                 "sub-title": "Phnom Penh - Museum",
                 "infor" : "Feel the solemnity of Cambodia's past at the Tuol Sleng Genocide Museum",
-                "image" : "https://i0.wp.com/www.travelingthruhistory.com/wp-content/uploads/2014/12/Tuol-Sleng-Genocide-Museum-B.jpg?fit=1920%2C779&ssl=1"
+                "image" : "https://i0.wp.com/www.travelingthruhistory.com/wp-content/uploads/2014/12/Tuol-Sleng-Genocide-Museum-B.jpg?fit=1920%2C779&ssl=1",
+                "url": "https://www.google.com/maps/place/Tuol+Sleng+Genocide+Museum/@11.5488562,104.9128095,17z/data=!3m1!4b1!4m6!3m5!1s0x3109512225dec8c3:0x13d2255f6e2fd8a7!8m2!3d11.548851!4d104.9176751!16zL20vMDI2NDYy?hl=en&entry=ttu"
             },
             {
                 "id" : "2",
                 "title" : "Banon",
                 "sub-title": "Battambang - Temple",
                 "infor" : "The most beautiful place in Battambang city",
-                "image" : "https://lh3.googleusercontent.com/p/AF1QipNs-Zg-Y0oFihliMF3FnNQz978UIRZOJJb9au2a=s1360-w1360-h1020"
+                "image" : "https://lh3.googleusercontent.com/p/AF1QipNs-Zg-Y0oFihliMF3FnNQz978UIRZOJJb9au2a=s1360-w1360-h1020",
+                "url": ""
             },
             {
                 "id" : "3",
@@ -26,14 +28,16 @@
                 "title" : "Royal Palace",
                 "sub-title": "Phnom Penh - Historic",
                 "infor" : "The Royal Palace in Phnom Penh, Cambodia, is a symbol of the monarchy and the official residence of the King. Known for its stunning Khmer architecture and the iconic Silver Pagoda",
-                "image" : "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/e4/ce/b1/20171006-093816-01-largejpg.jpg?w=1200&h=-1&s=1"
+                "image" : "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/e4/ce/b1/20171006-093816-01-largejpg.jpg?w=1200&h=-1&s=1",
+                "url": ""
             },
             {
                 "id" : "5",
                 "title" : "Mekong rivers",
                 "sub-title": "Kompong Cham - Boat",
                 "infor" : "Enjoy a selection of beverages, witness the spectacular skyline, and see this city from a totally unique vantage point",
-                "image" : "https://cdn.getyourguide.com/img/tour/16b9d89c42d0cd60.jpeg/98.jpg"
+                "image" : "https://cdn.getyourguide.com/img/tour/16b9d89c42d0cd60.jpeg/98.jpg",
+                "url": ""
             },
             {
                 "id" : "6",
@@ -54,7 +58,7 @@
                 "title" : "Win Win Memorial",
                 "sub-title": "Kandal - Historic",
                 "infor" : "The Win-Win Memorial is a monument that marks the end of civil wars in Cambodia and through then Prime Minister Hun Sen's Win-Win policy",
-                "image" : "https://www.khmertimeskh.com/wp-content/uploads/2018/12/1-Mai-Vireak-6.jpg"
+                "image" : "https://construction-property.com/wp-content/uploads/2018/08/win-win-memorial-set-to-open-in-december.jpg"
             },
             {
                 "id" : "9",
@@ -124,7 +128,7 @@
                 "title" : "Killing Fields",
                 "sub-title": "Phnom Penh - Historic",
                 "infor" : "The Killing Fields in Phnom Penh: a haunting memorial to the victims of the Khmer Rouge, a stark reminder of a tragic past",
-                "image" : "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/5c/a2/cd.jpg0"
+                "image" : "https://static.toiimg.com/thumb/103476476/Cambodia-Killing-Fields.jpg?width=1200&height=900"
             },
             {
                 "id" : "18",
@@ -149,73 +153,221 @@
             },
             {
                 "id" : "21",
-                "title" : "Banon",
-                "sub-title": "Battambang - Tample",
-                "infor" : "The most beautiful place in Battambang city",
-                "image" : "https://lh3.googleusercontent.com/p/AF1QipNs-Zg-Y0oFihliMF3FnNQz978UIRZOJJb9au2a=s1360-w1360-h1020"
+                "title" : "Tuk Tuk Bambootrain",
+                "sub-title": "Battambang - Activities",
+                "infor" : "Ride a tuk tuk as you explore the city, experience traveling on a bamboo train",
+                "image" : "https://cdn.getyourguide.com/img/tour/64a1316990163.jpeg/145.jpg"
             },
             {
                 "id" : "22",
-                "title" : "Banon",
-                "sub-title": "Battambang - Tample",
+                "title" : "Killing&BatCaves",
+                "sub-title": "Battambang - Activities",
                 "infor" : "The most beautiful place in Battambang city",
-                "image" : "https://lh3.googleusercontent.com/p/AF1QipNs-Zg-Y0oFihliMF3FnNQz978UIRZOJJb9au2a=s1360-w1360-h1020"
+                "image" : "https://cdn.getyourguide.com/img/tour/c8d8824b96b44fd5.jpeg/145.jpg"
             },
             {
                 "id" : "23",
-                "title" : "Banon",
-                "sub-title": "Battambang - Tample",
-                "infor" : "The most beautiful place in Battambang city",
-                "image" : "https://lh3.googleusercontent.com/p/AF1QipNs-Zg-Y0oFihliMF3FnNQz978UIRZOJJb9au2a=s1360-w1360-h1020"
+                "title" : "National Museum of Cambodia",
+                "sub-title": "Phnom Penh - Museum",
+                "infor" : "The most beautiful Museum in the city",
+                "image" : "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/27/ae/f8.jpg"
             },
             {
                 "id" : "24",
-                "title" : "Banon",
-                "sub-title": "Battambang - Tample",
-                "infor" : "The most beautiful place in Battambang city",
-                "image" : "https://lh3.googleusercontent.com/p/AF1QipNs-Zg-Y0oFihliMF3FnNQz978UIRZOJJb9au2a=s1360-w1360-h1020"
+                "title" : "Wat Ek Phnom",
+                "sub-title": "Battambang - Temple",
+                "infor" : "Wat Ek Phnom in Battambang, Cambodia, is a magnificent ancient temple that showcases the rich history and architectural brilliance of the Khmer civilization",
+                "image" : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Ek_Phnom3.JPG/220px-Ek_Phnom3.JPG"
             },
             {
                 "id" : "25",
-                "title" : "Banon",
-                "sub-title": "Battambang - Tample",
-                "infor" : "The most beautiful place in Battambang city",
-                "image" : "https://lh3.googleusercontent.com/p/AF1QipNs-Zg-Y0oFihliMF3FnNQz978UIRZOJJb9au2a=s1360-w1360-h1020"
+                "title" : "Battambang Crocodile Farm",
+                "sub-title": "Battambang - Historic",
+                "infor" : "This farm is built along the river and is a breeding ground made to breed baby animals",
+                "image" : "https://assets.traveltriangle.com/blog/wp-content/uploads/2018/10/Crocodile-farms.jpg"
             },
             {
                 "id" : "26",
-                "title" : "Banon",
-                "sub-title": "Battambang - Tample",
-                "infor" : "The most beautiful place in Battambang city",
-                "image" : "https://lh3.googleusercontent.com/p/AF1QipNs-Zg-Y0oFihliMF3FnNQz978UIRZOJJb9au2a=s1360-w1360-h1020"
+                "title" : "Damrey Sor Pagoda",
+                "sub-title": "Battambang - Temple",
+                "infor" : "Damrey Sor Pagoda is made right in the heart of the city, which makes it easy for the travelers to visit this place",
+                "image" : "https://assets.traveltriangle.com/blog/wp-content/uploads/2018/10/laast-pic.jpg"
             },
             {
                 "id" : "27",
-                "title" : "Banon",
-                "sub-title": "Battambang - Tample",
-                "infor" : "The most beautiful place in Battambang city",
-                "image" : "https://lh3.googleusercontent.com/p/AF1QipNs-Zg-Y0oFihliMF3FnNQz978UIRZOJJb9au2a=s1360-w1360-h1020"
+                "title" : "Phnom Sampeau",
+                "sub-title": "Battambang - Temple",
+                "infor" : "Phnom Sampeau is an archaeological site located in Sampeau Commune and it is home to the infamous Killing Caves and a Bat Cave",
+                "image" : "https://www.greeneratravel.com/userfiles/850phnomsampeau.jpg"
             },
             {
                 "id" : "28",
-                "title" : "Banon",
-                "sub-title": "Battambang - Tample",
-                "infor" : "The most beautiful place in Battambang city",
-                "image" : "https://lh3.googleusercontent.com/p/AF1QipNs-Zg-Y0oFihliMF3FnNQz978UIRZOJJb9au2a=s1360-w1360-h1020"
+                "title" : "Romcheik5 Artspace",
+                "sub-title": "Battambang - Art",
+                "infor" : "Romcheik5 Artspace is a contemporary art museum located in the provincial town of Battambang in Cambodia",
+                "image" : "https://www.battambang.com/wp-content/uploads/2020/11/romcheik-artspace-battambang.jpg"
             },
             {
                 "id" : "29",
-                "title" : "Banon",
-                "sub-title": "Battambang - Tample",
-                "infor" : "The most beautiful place in Battambang city",
-                "image" : "https://lh3.googleusercontent.com/p/AF1QipNs-Zg-Y0oFihliMF3FnNQz978UIRZOJJb9au2a=s1360-w1360-h1020"
+                "title" : "Kep",
+                "sub-title": "Kep - Beach",
+                "infor" : "Kep is the smallest province (khaet) of Cambodia covering 336 km2 (130 sq mi), with a population of 41,798.",
+                "image" : "https://www.mrlinhadventure.com/UserFiles/image/Cambodia-highlights/Kep-highlights-and-travel-guide.jpg"
             },
             {
                 "id" : "30",
-                "title" : "Banon",
-                "sub-title": "Battambang - Tample",
-                "infor" : "The most beautiful place in Battambang city",
-                "image" : "https://lh3.googleusercontent.com/p/AF1QipNs-Zg-Y0oFihliMF3FnNQz978UIRZOJJb9au2a=s1360-w1360-h1020"
+                "title" : "Banteay Srei",
+                "sub-title": "Siem Reap - Temple",
+                "infor" : "Banteay Srei Temple is built largely of red sandstone, a medium that lends itself to the elaborate decorative wall carvings which are still observable today",
+                "image" : "https://ak-d.tripcdn.com/images/0104h1200081tpznrDB12_C_1200_800_Q70.jpg?proc=source%2ftrip"
+            },
+            {
+                "id" : "31",
+                "title" : "Bayon Temple",
+                "sub-title": "Siem Reap - Temple",
+                "infor" : "Bayon temple is famous for its architecture. it is one of the most beautiful temples in Cambodia. it’s a must visit if you wish to immerse yourself in history",
+                "image" : "https://ak-d.tripcdn.com/images/100d0z000000njvyu4A16_C_1200_800_Q70.jpg?proc=source%2ftrip"
+            },
+            {
+                "id" : "32",
+                "title" : "Preah Khan Temple",
+                "sub-title": "Siem Reap - Temple",
+                "infor" : "Sacred Sword Temple is adjacent to the northeast of Tongwang City. It was built in the 12th century",
+                "image" : "https://ak-d.tripcdn.com/images/0103f120008fq9esk4A77_C_1200_800_Q70.jpg?proc=source%2ftrip"
+            },
+            {
+                "id" : "33",
+                "title" : "Phare Ponleu Selpak",
+                "sub-title": "Battambang - Art",
+                "infor" : "Phare Ponleu Selpak is a multi-arts, non-profit association for Cambodian children, famous for its circus performance",
+                "image" : "https://phareps.org/wp-content/uploads/2021/03/photo-24H-scaled.jpg"
+            },
+            {
+                "id" : "34",
+                "title" : "Phimeanakas",
+                "sub-title": "Siem Reap - Temple",
+                "infor" : "A pyramid-shaped temple in the jungle behind the Terrace of the Elephants in Angkor Thom",
+                "image" : "https://ak-d.tripcdn.com/images/100o0z000000mv41cA613_C_670_376_Q70.webp?proc=source%2ftrip&proc=source%2ftrip"
+            },
+            {
+                "id" : "35",
+                "title" : "Ta Som",
+                "sub-title": "Siem Reap - Temple",
+                "infor" : "Tasun Temple is a small temple located on the east side of Longpan Shui Pond, surrounded by Kapok trees (that is, snake trees)",
+                "image" : "https://ak-d.tripcdn.com/images/01027120009euvyl3EDB4_C_670_376_Q70.webp?proc=source%2ftrip&proc=source%2ftrip"
+            },
+            {
+                "id" : "36",
+                "title" : "Prasat Suor Prat",
+                "sub-title": "Siem Reap - Temple",
+                "infor" : "The Zodiac Pagoda, also called the Twelve Pagoda Temple, is located in Tongwang City, with a total of twelve small pagodas",
+                "image" : "https://ak-d.tripcdn.com/images/0102q120009eu92621FE0_C_1200_800_Q70.jpg?proc=source%2ftrip"
+            },
+            {
+                "id" : "37",
+                "title" : "Baphuon Temple",
+                "sub-title": "Siem Reap - Temple",
+                "infor" : "This building is very majestic and existed before the construction of Tongwang City",
+                "image" : "https://ak-d.tripcdn.com/images/10090z000000mpgkdE87F_C_1200_800_Q70.jpg?proc=source%2ftrip"
+            },
+            {
+                "id" : "38",
+                "title" : "Terrace of the Elephants",
+                "sub-title": "Siem Reap - Temple",
+                "infor" : "The War Elephant Step, also known as the Dou Elephant Terrace, is located in the city of Tongwang",
+                "image" : "https://ak-d.tripcdn.com/images/fd/tg/g2/M00/87/59/CghzgVWwsBmANsBjACb1Q_dI3vk200_C_1200_800_Q70.jpg?proc=source%2ftrip"
+            },
+            {
+                "id" : "39",
+                "title" : "Pre Rup temple",
+                "sub-title": "Siem Reap - Temple",
+                "infor" : "The building of Biliu Temple is very high. When you climb up, you can see the forest in the distance",
+                "image" : "https://ak-d.tripcdn.com/images/010531200086xp45vDCD1_C_1200_800_Q70.jpg?proc=source%2ftrip"
+            },
+            {
+                "id" : "40",
+                "title" : "Ta Keo",
+                "sub-title": "Siem Reap - Temple",
+                "infor" : "The whole temple is composed of solid long strips of bluestone neatly stacked on three layers of platforms, and five lotus-shaped towers stand at the top, similar to Angkor Wat",
+                "image" : "https://ak-d.tripcdn.com/images/1A0o1d000001ep7lbF63E_C_670_376_Q70.webp?proc=source%2ftrip&proc=source%2ftrip"
+            },
+            {
+                "id" : "41",
+                "title" : "Roluos Temples",
+                "sub-title": "Siem Reap - Temple",
+                "infor" : "The Rorosh complex is the masterpiece of Indravarman I. It is one of the large temples built by the Khmers and marked the beginning of the era of Khmer classical art",
+                "image" : "https://ak-d.tripcdn.com/images/100c0z000000nnbc01896_C_670_376_Q70.webp?proc=source%2ftrip&proc=source%2ftrip"
+            },
+            {
+                "id" : "42",
+                "title" : "Banteay Kdei",
+                "sub-title": "Siem Reap - Temple",
+                "infor" : "Bandikati was built at the end of the 12th century by Jayapatma VII. It is a Buddhist monastery, the central tower and the promenade have collapsed, and it is difficult to feel the previous layout",
+                "image" : "https://ak-d.tripcdn.com/images/10050y000000mgt4aC27C_C_670_376_Q70.webp?proc=source%2ftrip&proc=source%2ftrip"
+            },
+            {
+                "id" : "43",
+                "title" : "Banteay Samre",
+                "sub-title": "Siem Reap - Temple",
+                "infor" : "It is speculated that it was built in the same period as Angkor Wat, but its architectural structure is significantly different from many Angkor temples",
+                "image" : "https://ak-d.tripcdn.com/images/100h10000000og1qp0B19_C_670_376_Q70.webp?proc=source%2ftrip&proc=source%2ftrip"
+            },
+            {
+                "id" : "44",
+                "title" : "Neak Poan",
+                "sub-title": "Siem Reap - Temple",
+                "infor" : "Nirvana Palace is also called Longpan Pool, which means the entwined snake",
+                "image" : "https://ak-d.tripcdn.com/images/100j0q000000gl5rr7F14_C_1200_800_Q70.jpg?proc=source%2ftrip"
+            },
+            {
+                "id" : "45",
+                "title" : "Pub Street",
+                "sub-title": "Siem Reap - Artivities",
+                "infor" : "Some may find it over-powering, but if you're looking for where everybody is, then Pub Street it is",
+                "image" : "https://lp-cms-production.imgix.net/2021-11/GettyImages-514556674.jpg?auto=format&q=75&w=1024"
+            },
+            {
+                "id" : "46",
+                "title" : "Prasat Beng Mealea",
+                "sub-title": "Siem Reap - Temple",
+                "infor" : "The temple used to be utterly consumed by jungle, but some of the dense foliage has been cut back and cleaned up in recent years",
+                "image" : "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/70/16/8a.jpg"
+            },
+            {
+                "id" : "47",
+                "title" : "Bou Sraa Waterfall",
+                "sub-title": "Mondulkiri - Activities",
+                "infor" : "Phare Ponleu Selpak is a multi-arts, non-profit association for Cambodian children, famous for its circus performance",
+                "image" : "https://www.greeneratravel.com/userfiles/850bousrawaterfall.jpg"
+            },
+            {
+                "id" : "48",
+                "title" : "Phnom DoKramom",
+                "sub-title": "Mondulkiri - Activities",
+                "infor" : "Phnom Dokramom is an absolutely breathtaking mountain peak nestled in the heart of Cambodia. This natural wonder is a true marvel, captivating all who have the privilege of laying eyes upon it.",
+                "image" : "https://media-cdn.tripadvisor.com/media/photo-s/11/90/5a/95/dsc5312-largejpg.jpg"
+            },
+            {
+                "id" : "49",
+                "title" : "Lolei",
+                "sub-title": "Siem Reap - Temple",
+                "infor" : "Built on an island in an artificial pool in Khmer history. It was a major temple before Jayavarman II, the founder of the Angkor Dynasty, moved his capital to Angkor. The temple is dedicated to Shiva Linga",
+                "image" : "https://ak-d.tripcdn.com/images/01054120009hy9hbf4F9F_C_1200_800_Q70.jpg?proc=source%2ftrip"
+            },
+            {
+                "id" : "50",
+                "title" : "Koh Ker Temple",
+                "sub-title": "Siem Reap - Temple",
+                "infor" : "the most mysterious and shocking building is hidden deep in the jungle and rarely disturbed by the outside world",
+                "image" : "https://lp-cms-production.imgix.net/2023-06/iStock-1208555028.jpg"
+            },
+            {
+                "id" : "58",
+                "title" : "Battambang Provincial Museum",
+                "sub-title": "Battambang - Museum",
+                "infor" : "Battambang Provincial Museum is a museum located in Kamkor village in the provincial town of Battambang in western Cambodia",
+                "image" : "https://www.battambang.gov.kh/wp-content/uploads/2019/02/sxQZ0sseqA5u5V87Rx7W0cWA6WkEVTPhKqBbIRKQ.png"
             }
+            
     ]
 }

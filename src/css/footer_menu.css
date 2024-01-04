@@ -59,3 +59,25 @@
     /* Apply a transition for the width and height properties */
     transition: width 0.2s ease, height 0.2s ease;
 }
+
+
+@media screen and (max-width:747px) and (min-width: 605px) {
+    .nest-social
+    {
+        margin-top: 2em;
+    }
+}
+
+@media screen and (max-width:604px) and (min-width: 466px) {
+    .nest-social , .nest-contact
+    {
+        margin-top: 2em;
+    }
+}
+
+@media screen and (max-width:465px) and (min-width: 366px) {
+    .nest-social , .nest-contact
+    {
+        margin-top: 2em;
+    }
+}

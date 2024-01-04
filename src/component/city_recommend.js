@@ -6,6 +6,7 @@ import phnom_penh from '../img/download.jpeg'
 import battambang from '../img/battambang.jpeg'
 import kompot from '../img/kompot.jpeg'
 import jsondata from '../json/Recommendation.json'
+import { Link } from 'react-router-dom';
 
 const City_Recommend = () => {
 
@@ -19,16 +20,18 @@ const City_Recommend = () => {
                 </div>
                 <div className="show-category">
                     {data.map(item => (
-                        <div className="card" style={{ width: '18rem' }}>
-                            <div key={item.id}>
-                                <img src={item.image} className="card-img-top" alt={item.title} style={{ width: '18rem' }}/>
-                                <div className="card-body">
-                                    <h5 className="card-title"><b>{item.title}</b></h5>
-                                    <h6><b>{item['sub-title']}</b></h6>
-                                    <p className="card-text">{item.infor}</p>
+                        <Link to={item.url} target='_blank'>
+                            <div className="card" style={{ width: '18rem' }} >
+                                <div key={item.id}>
+                                    <img src={item.image} className="card-img-top" alt={item.title} style={{ width: '18rem' }}/>
+                                    <div className="card-body">
+                                        <h5 className="card-title"><b>{item.title}</b></h5>
+                                        <h6><b>{item['sub-title']}</b></h6>
+                                        <p className="card-text">{item.infor}</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </div>

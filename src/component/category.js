@@ -42,7 +42,7 @@ const Category = () => {
                         <div className="card" style={{ width: '18rem' }} key={category.id}>
                             <img src={category.image_url || category.image || landscape1} className="card-img-top" alt="..." />
                             <div className="card-body">
-                                <h5 className="card-title">{category.name}</h5>
+                                <h5 className="card-title"><b>{category.name}</b></h5>
                                 <p className="card-text">{category.detail}</p>
                             </div>
                         </div>

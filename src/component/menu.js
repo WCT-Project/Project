@@ -43,7 +43,7 @@ function Menu() {
                         <Link to="/admin" className="navbar-brand" href="#"><b>
                             <span>
                                 <span className='span-h1'> 
-                                    <span>Trip</span> <span>Wallet</span>
+                                    <span className='span'>Trip</span> <span className='span'>Wallet</span>
                                 </span>
                             </span>
                         </b></Link>
@@ -51,7 +51,7 @@ function Menu() {
                         <Link to="/" className="navbar-brand" href="#"><b>
                             <span>
                                 <span className='span-h1'>
-                                    <span>Trip</span> <span>Wallet</span>
+                                    <span className='user'>Trip</span> <span className='user'>Wallet</span>
                                 </span>
                             </span>
                         </b></Link>

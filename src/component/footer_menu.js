@@ -20,17 +20,17 @@ const Footer_menu = () =>{
                         <a><img src={tiktok} className="icon-footer"></img></a>
                     </div>
                 </div>
-                <div className="nest-footer-col">
+                <div className="nest-footer-col nest-contact">
                     <h3>Contact</h3>
                     <p>Khan Toul Kork/Phnom Penh</p>
                     <p>tripwallet@gmail.com</p>
                     <p>+855 69 227 495</p>
                 </div>
-                <div className="nest-footer-col">
+                <div className="nest-footer-col nest-social">
                     <h3>Social Media</h3>
-                    <p>Facebook</p>
-                    <p>Instagram</p>
-                    <p>Tiktok</p>
+                    <p>Trip Wallet</p>
+                    <p>Insta Trip Wallet</p>
+                    <p>Tik Trip Wallet</p>
                 </div>
             </div>
             <div className="dev-names">
