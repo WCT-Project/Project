@@ -13,6 +13,7 @@ import landscape1 from '../img/landscape1.png';
 
 
 export default class SimpleSlider extends Component {
+  
   render() {
     const settings = {
       dots: true,
