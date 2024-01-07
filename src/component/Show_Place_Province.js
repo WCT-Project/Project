@@ -5,6 +5,7 @@ import datacate from "../json/Category.json"
 
 import $ from 'jquery'
 
+var CONFIG = require('../conf.json')
 
 function Show_Place_Province() {
 
@@ -23,7 +24,7 @@ function Show_Place_Province() {
         if (useFilter) {
             try {
                 const response = await $.ajax({
-                    url: 'http://127.0.0.1:5000/province/data/filtered',
+                    url: `${CONFIG.ip}:${CONFIG.port}/province/data/filtered`,
                     type: 'POST',
                     dataType: 'json',
                     contentType: 'application/json',
@@ -43,7 +44,7 @@ function Show_Place_Province() {
             }
         } else {
             $.ajax({
-                url: 'http://127.0.0.1:5000/province/data',
+                url: `${CONFIG.ip}:${CONFIG.port}/province/data`,
                 type: 'GET',
                 dataType: 'json',
                 success: function (response) {

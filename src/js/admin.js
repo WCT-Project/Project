@@ -8,7 +8,7 @@ import $ from 'jquery'
 
 import Menu from "../component/menu";
 
-
+var CONFIG = require('../conf.json')
 
 const Admin = () => {
     const navigate = useNavigate()
@@ -22,7 +22,7 @@ const Admin = () => {
 
     function getCategories() {
         $.ajax({
-            url: 'http://127.0.0.1:5000/category',
+            url: `${CONFIG.ip}:${CONFIG.port}/category`,
             type: 'GET',
             dataType: 'json',
             success: function (response) {
@@ -38,7 +38,7 @@ const Admin = () => {
 
     function getLocations() {
         $.ajax({
-            url: 'http://127.0.0.1:5000/province',
+            url: `${CONFIG.ip}:${CONFIG.port}/province`,
             type: 'GET',
             dataType: 'json',
             success: function (response) {
@@ -54,7 +54,7 @@ const Admin = () => {
 
     function getPlaces() {
         $.ajax({
-            url: 'http://127.0.0.1:5000/place',
+            url: `${CONFIG.ip}:${CONFIG.port}/place`,
             type: 'GET',
             dataType: 'json',
             success: function (response) {
@@ -70,7 +70,7 @@ const Admin = () => {
 
     function getAccomodations() {
         $.ajax({
-            url: 'http://127.0.0.1:5000/accomodation',
+            url: `${CONFIG.ip}:${CONFIG.port}/accomodation`,
             type: 'GET',
             dataType: 'json',
             success: function (response) {
@@ -86,7 +86,7 @@ const Admin = () => {
 
     function getTransportations() {
         $.ajax({
-            url: 'http://127.0.0.1:5000/transportation',
+            url: `${CONFIG.ip}:${CONFIG.port}/transportation`,
             type: 'GET',
             dataType: 'json',
             success: function (response) {
@@ -103,7 +103,7 @@ const Admin = () => {
     async function create(table, data) {
         try {
             const response = await $.ajax({
-                url: `http://127.0.0.1:5000/${table}/create`,
+                url: `${CONFIG.ip}:${CONFIG.port}/${table}/create`,
                 type: 'POST',
                 dataType: 'json',
                 contentType: 'application/json',
@@ -122,7 +122,7 @@ const Admin = () => {
     async function write(table, data) {
         try {
             const response = await $.ajax({
-                url: `http://127.0.0.1:5000/${table}/write`,
+                url: `${CONFIG.ip}:${CONFIG.port}/${table}/write`,
                 type: 'POST',
                 dataType: 'json',
                 contentType: 'application/json',
@@ -141,7 +141,7 @@ const Admin = () => {
     async function unlink(table, data) {
         try {
             const response = await $.ajax({
-                url: `http://127.0.0.1:5000/${table}/unlink`,
+                url: `${CONFIG.ip}:${CONFIG.port}/${table}/unlink`,
                 type: 'POST',
                 dataType: 'json',
                 contentType: 'application/json',

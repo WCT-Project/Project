@@ -4,13 +4,16 @@ import landscape1 from '../img/landscape1.png';
 
 import $ from 'jquery'
 
+var CONFIG = require('../conf.json')
+
 const Category = () => {
 
     const [categories, setCategories] = useState([]);
 
+
     function getCategories() {
         $.ajax({
-            url: 'http://127.0.0.1:5000/category',
+            url: `${CONFIG.ip}:${CONFIG.port}/category`,
             type: 'GET',
             dataType: 'json',
             success: function (response) {

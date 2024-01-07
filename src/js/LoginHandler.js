@@ -2,6 +2,7 @@ import React, { createContext, useContext, useState , useEffect } from 'react';
 
 import $ from 'jquery'
 
+var CONFIG = require('../conf.json')
 
 // Create a context with default values
 const LoginContext = createContext({
@@ -35,7 +36,7 @@ export const LoginProvider = ({ children }) => {
 
         try {
             const response = await $.ajax({
-                url: 'http://127.0.0.1:5000/user/authenticate',
+                url:`${CONFIG.ip}:${CONFIG.port}/user/authenticate`,
                 type: 'POST',
                 dataType: 'json',
                 contentType: 'application/json',
@@ -87,7 +88,7 @@ export const LoginProvider = ({ children }) => {
 
         try {
             const response = await $.ajax({
-                url: 'http://127.0.0.1:5000/user/create',
+                url: `${CONFIG.ip}:${CONFIG.port}/user/create`,
                 type: 'POST',
                 dataType: 'json',
                 contentType: 'application/json',

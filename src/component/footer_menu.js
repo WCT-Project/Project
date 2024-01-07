@@ -51,7 +51,7 @@ const Footer_menu = () =>{
                         </div>
                     </div>
                     <div className="nest-developer">
-                        <p5>Aliya Thorun</p5>
+                        <p5>Sothieliya Thoeun</p5>
                         <div className="nest-a-developer">
                             <a href='https://www.facebook.com/profile.php?id=100005030115710'><img src={facebook} className="icon-footer"></img></a>
                             <a href="https://github.com/aliyathoeun"><img src={github} className="icon-footer"></img></a>

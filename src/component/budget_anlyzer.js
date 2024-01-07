@@ -7,6 +7,7 @@ import $ from 'jquery'
 // import { useAnalyzerFilter } from './analyzer_filter';
 import '../css/budget_analyzer.css';
 
+var CONFIG = require('../conf.json')
 
 const BudgetAnalyzer = () => {
     const navigate = useNavigate()
@@ -22,7 +23,7 @@ const BudgetAnalyzer = () => {
 
     function getLocations() {
         $.ajax({
-            url: 'http://127.0.0.1:5000/province/selection',
+            url: `${CONFIG.ip}:${CONFIG.port}/province/selection`,
             type: 'GET',
             dataType: 'json',
             success: function (response) {
@@ -37,7 +38,7 @@ const BudgetAnalyzer = () => {
     }
     function getCategories() {
         $.ajax({
-            url: 'http://127.0.0.1:5000/category/selection',
+            url: `${CONFIG.ip}:${CONFIG.port}/category/selection`,
             type: 'GET',
             dataType: 'json',
             success: function (response) {
