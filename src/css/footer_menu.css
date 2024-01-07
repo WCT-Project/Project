@@ -1,19 +1,44 @@
+.container-top-footer
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-top-footer p
+{
+    width: 35em;
+    text-align: center;
+}
+.copyright
+{
+    padding: 0 0 1em 2em;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+.copyright span
+{
+    color: #22C55E;
+}
+
+.container-top-footer div a
+{
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+}
 
 .nest-footer
 {
-    background: linear-gradient(#ffffff , #1e241f 5%);
+    background: linear-gradient(#ffffff , #000000 5%);
     width: 100%;
     color: aliceblue;
 }
 .nest-footer-row
 {
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-flow: row wrap;
     padding-top: 2em;
-    margin-left: 4em;
-    margin-right: 4em;
 }
 .nest-footer-col
 {
@@ -23,9 +48,8 @@
 }
 
 .nest-footer-row
-.first
 {
-    width: 17em;
+    width: 100%;
 }
 
 

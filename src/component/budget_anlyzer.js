@@ -98,7 +98,7 @@ const BudgetAnalyzer = () => {
         <section>
             <div className="budget-analysis-container">
                 <div>
-                    <h4 className="main-caption">Budget Analysis</h4>
+                    <h4 className="main-caption"><b>Budget Analysis</b></h4>
                 </div>
                 <form className="nest-form" onSubmit={handleAnalysis}>
                     <div className="row form-category">

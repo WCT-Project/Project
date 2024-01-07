@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLogin } from '../js/LoginHandler';
-
+import bslo from '../img/bslo.jpg'
 import login_bg from '../img/login_bg.png'
 import { useNavigate } from 'react-router-dom';
 
@@ -50,7 +50,7 @@ const LoginHandling = () => {
     return (
       <body className='body-login'>
         <div className="loginlogin">
-          {/* <img src={login_bg} alt="login image" className="login_img" /> */}
+          <img src={bslo} alt="login image" className="login_img" />
 
           <form onSubmit={handleLogin} className="login__formlogin">
               <h1 className="login__title"><b>Trip Wallet</b></h1>

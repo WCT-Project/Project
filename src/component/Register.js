@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
-
+import bslo from '../img/bslo.jpg'
 import React from "react";
 
 import '../css/Register.css';
@@ -79,7 +79,7 @@ const Register = () => {
     return (
         <body className='body-login'>
           <div className="loginlogin">
-  
+            <img src={bslo} alt="login image" className="login_img" />
             <form onSubmit={handleRegister} className="login__formlogin">
                 <h1 className="login__title">Register</h1>
 

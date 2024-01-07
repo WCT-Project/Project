@@ -53,7 +53,7 @@ function Menu() {
                         <Link to="/" className="navbar-brand" href="#"><b>
                             <span>
                                 <span className='span-h1'>
-                                    <span className='user'>Trip</span> <span className='user'>Wallet</span>
+                                    <span className='user'><b>Trip</b></span> <span className='user'><b>Wallet</b></span>
                                 </span>
                             </span>
                         </b></Link>
@@ -65,17 +65,17 @@ function Menu() {
                         <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li className="nav-item">
                                 <Link to="/" className={`nav-link ${isMenuActive('') ? 'active-menu' : ''}`} aria-current="page">
-                                    <span className={`menuitem ${isMenuActive('') ? 'active-menu-span' : ''}`} data-menu-name="home">Home</span>
+                                    <span className={`menuitem ${isMenuActive('') ? 'active-menu-span' : ''}`} data-menu-name="home"><b>Home</b></span>
                                 </Link>
                             </li>
                             <li className="nav-item">
                                 <Link to="/budget_analysis" className={`nav-link ${isMenuActive('budget_analysis') ? 'active-menu' : ''}`} aria-current="page">
-                                    <span className={`menuitem ${isMenuActive('budget_analysis') ? 'active-menu-span' : ''}`} data-menu-name="budget_analysis">Budget Analysis</span>
+                                    <span className={`menuitem ${isMenuActive('budget_analysis') ? 'active-menu-span' : ''}`} data-menu-name="budget_analysis"><b>Budget Analysis</b></span>
                                 </Link>
                             </li>
                             <li className="nav-item">
                                 <Link to="/recommendation" className={`nav-link ${isMenuActive('recommendation') ? 'active-menu' : ''}`} aria-current="page">
-                                    <span className={`menuitem ${isMenuActive('recommendation') ? 'active-menu-span' : ''}`} data-menu-name="recommendation">Recommendations</span>
+                                    <span className={`menuitem ${isMenuActive('recommendation') ? 'active-menu-span' : ''}`} data-menu-name="recommendation"><b>Recommendations</b></span>
                                 </Link>
                             </li>
                             <li className={`nav-item ${!isLoggedIn ? 'nav-LOGIN-REGISTER' : 'nav-LOGGED-IN'}`}>
@@ -93,7 +93,7 @@ function Menu() {
                                         </Dropdown>
                                     ) : (
                                         <Link to="/login" className="nav-link" aria-current="page">
-                                            <span className="login">Login / Register</span>
+                                            <span className="login"><b>Login / Register</b></span>
                                         </Link>
                                     )
                                 }

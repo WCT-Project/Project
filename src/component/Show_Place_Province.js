@@ -89,7 +89,7 @@ function Show_Place_Province() {
                                 
                                 <div className="show-category">
                                     {line.place.map((item) => (
-                                        <div className="card" style={{ width: '18rem' }}>
+                                        <div className="card cardc" style={{ width: '18rem' }}>
                                             <img src={item.image_url || item.image} className="card-img-top" alt="..." />
                                             <div className="card-body">
                                                 <h5 className="card-title">{item.name}</h5>
@@ -107,7 +107,7 @@ function Show_Place_Province() {
 
                                 <div className="show-category">
                                     {line.accomodation.map((acco_item) => (
-                                        <div className="card" style={{ width: '18rem' }}>
+                                        <div className="card cardc" style={{ width: '18rem' }}>
                                             <img src={acco_item.image_url || acco_item.image} className="card-img-top" alt="..." />
                                             <div className="card-body">
                                                 <h5 className="card-title">{acco_item.name}</h5>
@@ -123,7 +123,7 @@ function Show_Place_Province() {
                                 
                                 <div className="show-category">
                                     {line.transportation.map((trnp_item) => (
-                                        <div className="card" style={{ width: '18rem' }}>
+                                        <div className="card cardc" style={{ width: '18rem' }}>
                                             <img src={trnp_item.image_url || trnp_item.image} className="card-img-top" alt="..." />
                                             <div className="card-body">
                                                 <h5 className="card-title">{trnp_item.name}</h5>

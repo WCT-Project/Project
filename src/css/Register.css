@@ -4,7 +4,7 @@
 .input-login,
 .button-login {
   font-size: 1rem;
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .body-login {
@@ -73,24 +73,11 @@ img {
 .login__icon, .login__eye {
   font-size: 1.25rem;
 }
-.login__input {
-  width: 100%;
-  padding-block: 0.8rem;
-  background: none;
-  color: hsl(0, 0%, 0%);
-  position: relative;
-  z-index: 1;
-}
+
 .login__box-input {
   position: relative;
 }
-.login__label {
-  position: absolute;
-  left: 0;
-  top: 13px;
-  font-weight: 500;
-  transition: top 0.3s, font-size 0.3s;
-}
+
 .login__eye {
   position: absolute;
   right: 0;
@@ -134,16 +121,8 @@ img {
   cursor: pointer;
   margin-bottom: 2rem;
 }
-.login__registerlogin {
-  text-align: center;
-}
-.login__registerlogin .a {
-  color: hsl(0, 0%, 100%);
-  font-weight: 500;
-}
-.login__registerlogin a:hover {
-  text-decoration: underline;
-}
+
+
 
 /* Input focus move up label */
 .login__input:focus + .login__label {

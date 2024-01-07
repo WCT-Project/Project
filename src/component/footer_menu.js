@@ -10,27 +10,15 @@ const Footer_menu = () =>{
 
         <footer className="nest-footer footer-nest">
             <div className="nest-footer-row">
-                <div className="nest-footer-col first">
-                    <h3>About</h3>
-                    <p>The webstie can analys your budget for joing a trip with the best estimate price and quality of place</p>
-                    <div className="nest-icon-footer">
-                        <a href='https://www.facebook.com/profile.php?id=100065175015705'><img src={facebook} className="icon-footer"></img></a>
-                        <a href="https://github.com/CSTVann"><img src={github} className="icon-footer"></img></a>
-                        <a><img src={youtube} className="icon-footer"></img></a>
-                        <a><img src={tiktok} className="icon-footer"></img></a>
+                <div className="container-top-footer">
+                    <h3><b>Trip Wallet</b></h3>
+                    <p>The website can analyze your budget for joining a trip by providing the best estimate of both price and the quality of the destination. Whether you are planning a leisure vacation or a business trip.</p>
+                    <div>
+                        <a href='https://www.facebook.com/profile.php?id=100008341302892'><img src={facebook} className="icon-footer"></img></a>
+                        <a href="https://github.com/jingtheanteng"><img src={github} className="icon-footer"></img></a>
+                        <a href="https://github.com/jingtheanteng"><img src={youtube} className="icon-footer"></img></a>
+                        <a href="https://github.com/jingtheanteng"><img src={tiktok} className="icon-footer"></img></a>
                     </div>
-                </div>
-                <div className="nest-footer-col nest-contact">
-                    <h3>Contact</h3>
-                    <p>Khan Toul Kork/Phnom Penh</p>
-                    <p>tripwallet@gmail.com</p>
-                    <p>+855 69 227 495</p>
-                </div>
-                <div className="nest-footer-col nest-social">
-                    <h3>Social Media</h3>
-                    <p>Trip Wallet</p>
-                    <p>Insta Trip Wallet</p>
-                    <p>Tik Trip Wallet</p>
                 </div>
             </div>
             <hr className="br-footer"></hr>
@@ -58,6 +46,7 @@ const Footer_menu = () =>{
                         </div>
                     </div>
                 </div>
+                <p className="copyright">Copyright @2024 <span><b>Trip Wallet</b></span></p>
             </div>
         </footer>
 

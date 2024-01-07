@@ -4,7 +4,7 @@
 .input-login,
 .button-login {
   font-size: 1rem;
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .body-login {
@@ -82,12 +82,27 @@ img {
 .login__box-input {
   position: relative;
 }
+.ri-user-3-line
+{
+  color: white;
+}
+.ri-lock-2-line
+{
+  color: white;
+}
+.login__eye
+{
+  color: white;
+}
+
+
 .login__label {
   position: absolute;
   left: 0;
   top: 13px;
   font-weight: 500;
   transition: top 0.3s, font-size 0.3s;
+  color: white;
 }
 .login__eye {
   position: absolute;
@@ -109,6 +124,7 @@ img {
 }
 .login__check-label, .login__forgotlogin, .login__registerlogin {
   font-size: .813rem;
+  color: white;
 }
 .login__check-group {
   column-gap: 0.5rem;
@@ -135,7 +151,7 @@ img {
 }
 .wrong-password
 {
-  color: rgb(79, 79, 79);
+  color: rgb(250, 250, 250);
 }
 
 .login__buttonlogin:hover {
