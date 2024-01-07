@@ -19,7 +19,13 @@
 .card
 {
     margin: 0 1em 2em 1em;
+    box-shadow: 1px 1px 35px #72757394;
 }
+
+
+  
+  
+
 .primary
 {
     background-color: #1a1a1a;

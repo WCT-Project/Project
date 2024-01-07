@@ -8,7 +8,7 @@ import tiktok from '../img/tiktok.svg'
 const Footer_menu = () =>{
     return(
 
-        <footer className="nest-footer">
+        <footer className="nest-footer footer-nest">
             <div className="nest-footer-row">
                 <div className="nest-footer-col first">
                     <h3>About</h3>
@@ -33,8 +33,31 @@ const Footer_menu = () =>{
                     <p>Tik Trip Wallet</p>
                 </div>
             </div>
+            <hr className="br-footer"></hr>
             <div className="dev-names">
-                Develop: "C.STV", "TJT", "ALI"
+                <div className="footer-least-one">
+                    <div className="nest-developer">
+                        <p5>Jingthean Teng</p5>
+                        <div className="nest-a-developer">
+                            <a href='https://www.facebook.com/profile.php?id=100008341302892'><img src={facebook} className="icon-footer"></img></a>
+                            <a href="https://github.com/jingtheanteng"><img src={github} className="icon-footer"></img></a>
+                        </div>
+                    </div>
+                    <div className="nest-developer">
+                        <p5>Sotheavann Chhorn</p5>
+                        <div className="nest-a-developer">
+                            <a href='https://www.facebook.com/profile.php?id=100065175015705'><img src={facebook} className="icon-footer"></img></a>
+                            <a href="https://github.com/CSTVann"><img src={github} className="icon-footer"></img></a>
+                        </div>
+                    </div>
+                    <div className="nest-developer">
+                        <p5>Aliya Thorun</p5>
+                        <div className="nest-a-developer">
+                            <a href='https://www.facebook.com/profile.php?id=100005030115710'><img src={facebook} className="icon-footer"></img></a>
+                            <a href="https://github.com/aliyathoeun"><img src={github} className="icon-footer"></img></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </footer>
 

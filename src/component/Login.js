@@ -50,10 +50,10 @@ const LoginHandling = () => {
     return (
       <body className='body-login'>
         <div className="loginlogin">
-          <img src={login_bg} alt="login image" className="login_img" />
+          {/* <img src={login_bg} alt="login image" className="login_img" /> */}
 
           <form onSubmit={handleLogin} className="login__formlogin">
-              <h1 className="login__title">Login</h1>
+              <h1 className="login__title"><b>Trip Wallet</b></h1>
 
               <div className="login__content">
                 <div className="login__box">
@@ -98,18 +98,18 @@ const LoginHandling = () => {
 
               {isWrongLogin && (
                 <div>
-                  Wrong Password
+                  <span className='wrong-password'>Wrong Password</span>
                 </div>
               )}
 
-              <div className="login__check">
+              {/* <div className="login__check">
                 <div className="login__check-group">
                     <input type="checkbox" className="login__check-input input-login" id="login-check" />
                     <label for="login-check" className="login__check-label">Remember me</label>
                 </div>
 
                 <a href="#" className="login__forgotlogin">Forgot Password?</a>
-              </div>
+              </div> */}
 
               <button type="submit" className="login__buttonlogin button-login">Login</button>
 

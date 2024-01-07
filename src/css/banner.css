@@ -1,7 +1,15 @@
 .banner-item {
     height: 500px;
-    background-color: #1D231F;
+    background: #1D231F;
+    animation: fadeBackground 3s infinite; /* Set infinite to loop indefinitely */
+    animation-fill-mode: forwards;
 }
+  
+  @keyframes fadeBackground {
+    0% { background-color: #1D231F; }
+    50% { background-color: #222523; } /* Change the percentage based on your preference */
+    100% { background-color: #1D231F; }
+  }
 .banner-item div
 {
     color: white;
@@ -229,3 +237,5 @@
     border: solid 1px #2E3A32;
     box-shadow: 1px 1px 25px #525954;
 }
+
+
