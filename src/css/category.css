@@ -13,15 +13,21 @@
 {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 2em 1em 2em;
-    justify-content: space-between;
+    margin: 0 1em 1em 1em;
+    justify-content: center;
 }
-.card
+.cardc
 {
-    margin: 0 1em 2em 1em;
+    margin: 0 auto 2em auto;
     box-shadow: 1px 1px 35px #72757394;
 }
 
+.cardr
+{
+    margin: 0 1em 2em 1em;
+    box-shadow: 1px 1px 35px #72757394;
+    min-height: 27em;
+}
 
 
 .primary

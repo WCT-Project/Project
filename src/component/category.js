@@ -42,7 +42,7 @@ const Category = () => {
                 </div>
                 <div className="show-category">
                     {categories.map((category) => (
-                        <div className="card" style={{ width: '18rem' }} key={category.id}>
+                        <div className="card cardc" style={{ width: '18rem' }} key={category.id}>
                             <img src={category.image_url || category.image || landscape1} className="card-img-top" alt="..." />
                             <div className="card-body">
                                 <h5 className="card-title"><b>{category.name}</b></h5>

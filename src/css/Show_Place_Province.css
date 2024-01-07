@@ -3,17 +3,7 @@
     margin-top: 2em;
     margin-bottom: 1em;
 }
-.show-category
-{
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 2em 1em 2em;
-    justify-content: space-between;
-}
-.card
-{
-    margin: 0 1em 2em 1em;
-}
+
 .primary
 {
     background-color: #1a1a1a;
@@ -26,14 +16,6 @@
 }
 
 
-@media screen and (max-width: 703px) {
-    .show-category
-    {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-}
 @media screen and (max-width: 379px) {
     .primary a
     {

@@ -1,7 +1,7 @@
 
 .nest-footer
 {
-    background-color: #1e241f;
+    background: linear-gradient(#ffffff , #1e241f 5%);
     width: 100%;
     color: aliceblue;
 }

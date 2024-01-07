@@ -21,7 +21,7 @@ const City_Recommend = () => {
                 <div className="show-category">
                     {data.map(item => (
                         <Link to={item.url} target='_blank'>
-                            <div className="card" style={{ width: '18rem' }} >
+                            <div className="card cardr" style={{ width: '18rem' }} >
                                 <div key={item.id}>
                                     <img src={item.image} className="card-img-top" alt={item.title} style={{ width: '18rem' }}/>
                                     <div className="card-body">
