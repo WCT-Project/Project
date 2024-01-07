@@ -7,7 +7,9 @@
 
 .container-top-footer p
 {
-    width: 35em;
+    width: 100%;
+    padding-left: 1em;
+    padding-right: 1em;
     text-align: center;
 }
 .copyright
@@ -29,7 +31,7 @@
 
 .nest-footer
 {
-    background: linear-gradient(#ffffff , #000000 5%);
+    background: #000;
     width: 100%;
     color: aliceblue;
 }
@@ -173,4 +175,26 @@
   to {
     background-position: 200% center;
   }
+}
+@media screen and (max-width: 650px) {
+    .nest-developer p5
+    {
+        font-size: 12px;
+    }
+    .nest-a-developer a img
+    {
+        height: 15px;
+        width: 15px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .nest-developer p5
+    {
+        font-size: 9px;
+    }
+    .nest-a-developer a img
+    {
+        height: 11px;
+        width: 11px;
+    }
 }
