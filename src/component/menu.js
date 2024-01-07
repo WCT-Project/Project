@@ -16,9 +16,11 @@ function Menu() {
 
     const [buttonProfile, setProfile] = useState(true);
 
-    if (storedUser.email || storedUser.name) {
-        storedIsLoggedIn = true;
-        if (storedUser.is_admin) storedIsAdmin = true
+    if (storedUser) {
+        if (storedUser.email || storedUser.name) {
+            storedIsLoggedIn = true;
+            if (storedUser.is_admin) storedIsAdmin = true
+        }
     }
 
     const {isLoggedIn, isAdmin, userName, login, logout} = useLogin();

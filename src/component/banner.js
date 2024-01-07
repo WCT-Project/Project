@@ -33,9 +33,9 @@ export default class SimpleSlider extends Component {
                   <div className="nest-item-banner">
                     <div className="neest-handp">
                       <span className="nesth3">
-                        <h3 className="h3">Trip &</h3>
-                        <h3 className="h3">Budget to</h3>
-                        <h3 className="h3">Temple</h3>
+                        <h3 className="h3"><b>Trip &</b></h3>
+                        <h3 className="h3"><b>Budget to</b></h3>
+                        <h3 className="h3 h3-types"><b>Temple</b></h3>
                       </span>
                       <span className="nestp">
                         <p className="p">Trip Analysis budget with</p>
@@ -52,9 +52,9 @@ export default class SimpleSlider extends Component {
                   <div className="nest-item-banner">
                     <div className="neest-handp">
                       <span className="nesth3">
-                        <h3 className="h3">Trip &</h3>
-                        <h3 className="h3">Budget to</h3>
-                        <h3 className="h3">Beaches</h3>
+                        <h3 className="h3"><b>Trip &</b></h3>
+                        <h3 className="h3"><b>Budget to</b></h3>
+                        <h3 className="h3 h3-types"><b>Beaches</b></h3>
                       </span>
                       <span className="nestp">
                         <p className="p">Trip Analysis budget with</p>
@@ -71,9 +71,9 @@ export default class SimpleSlider extends Component {
                   <div className="nest-item-banner">
                     <div className="neest-handp">
                       <span className="nesth3">
-                        <h3 className="h3">Trip &</h3>
-                        <h3 className="h3">Budget to</h3>
-                        <h3 className="h3">Cities</h3>
+                        <h3 className="h3"><b>Trip &</b></h3>
+                        <h3 className="h3"><b>Budget to</b></h3>
+                        <h3 className="h3 h3-types"><b>Cities</b></h3>
                       </span>
                       <span className="nestp">
                         <p className="p">Trip Analysis budget with</p>

@@ -1,7 +1,7 @@
 
 .nest-footer
 {
-    background-color: #1D231F;
+    background-color: #1e241f;
     width: 100%;
     color: aliceblue;
 }
@@ -55,6 +55,21 @@
     transition: width 0.2s ease, height 0.2s ease;
 }
 
+@media screen and (max-width:899px) and (min-width: 748px) {
+    .nest-footer-col h3
+    {
+        font-size: 25px;
+    }
+    .nest-footer-col p
+    {
+        font-size: 12px;
+    }
+    .icon-footer
+    {
+        width: 15px;
+        height: 15px;
+    }
+}
 
 @media screen and (max-width:747px) and (min-width: 605px) {
     .nest-social
