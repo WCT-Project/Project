@@ -182,11 +182,11 @@
     
     .h3
     {
-        font-size: 30px;
+        font-size: 33px;
     }
     .p
     {
-        font-size: 10px;
+        font-size: 13px;
     }
 }
 @media screen and (min-width:300px) and (max-width: 399px) {
@@ -221,11 +221,11 @@
     
     .h3
     {
-        font-size: 27px;
+        font-size: 25px;
     }
     .p
     {
-        font-size: 9px;
+        font-size: 11px;
     }
 }
 
