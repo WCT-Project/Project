@@ -46,7 +46,7 @@ const Footer_menu = () =>{
                         </div>
                     </div>
                 </div>
-                <p className="copyright">Copyright @2024 <span><b>Trip Wallet</b></span></p>
+                <p className="copyright">Copyright @2024 <span><b><a href="https://www.canva.com/design/DAF5OauNPLM/4ELN1n09reAGwUuJSGn4aA/edit?utm_content=DAF5OauNPLM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Trip Wallet</a></b></span></p>
             </div>
         </footer>
 
