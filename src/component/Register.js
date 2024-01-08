@@ -79,7 +79,7 @@ const Register = () => {
     return (
         <body className='body-login'>
           <div className="loginlogin">
-            <img src={bslo} alt="login image" className="login_img" />
+            {/* <img src={bslo} alt="login image" className="login_img" /> */}
             <form onSubmit={handleRegister} className="login__formlogin">
                 <h1 className="login__title">Register</h1>
 

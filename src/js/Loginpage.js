@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 
 import Menu from "../component/menu";
 import Login from "../component/Login";
+import bslo from "../img/bslothree.jpg"
 
 const Register_Form = () => {
     useEffect(() => {
@@ -15,6 +16,7 @@ const Register_Form = () => {
     }, []);
     return (
         <>
+            <img src={bslo} alt="login image" className="login_img" />
             <Menu />
             <Login />
         </>

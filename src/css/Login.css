@@ -36,9 +36,10 @@ img {
 .login_img {
   position: absolute;
   width: 100%;
-  height: 120vh;
+  height: 160vh;
   object-fit: cover;
   object-position: center;
+  margin-top: -55px;
 }
 .login__formlogin {
   position: relative;
