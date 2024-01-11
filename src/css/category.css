@@ -13,12 +13,12 @@
 {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 1em 1em 1em;
+    padding: 0 0 1em 0;
     justify-content: center;
 }
 .cardc
 {
-    margin: 0 auto 2em auto;
+    margin: 0 1em 2em 1em;
     box-shadow: 1px 1px 35px #72757394;
 }
 
