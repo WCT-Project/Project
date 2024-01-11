@@ -10,6 +10,9 @@
     padding-bottom: 1em;
     background-color: #FBFBFB;
 }
+.input-input:focus-visible {
+    outline-color: #2e3a32;
+}
 .after-input-box
 {
     display: flex;
@@ -150,3 +153,12 @@
     --bs-btn-disabled-border-color: #000000;
 }
 
+
+
+
+.css-t3ipsp-control {
+    box-shadow: 0 0 0 1px !important;
+}
+.css-t3ipsp-control:hover {
+    border-color: #2e3a32 !important;
+}

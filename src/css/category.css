@@ -73,7 +73,7 @@
 
 .card:hover img {
     transform: scale(1.1); 
-    transition: 1.5s ease;
+    transition: 1.2s ease;
     border-radius: 12px;
     border: solid 1px #2E3A32;
     box-shadow: 1px 1px 25px #2E3A32;
