@@ -1,6 +1,6 @@
 .banner-item {
     height: 500px;
-    background: #1D231F;
+    background: #000000;
     animation: fadeBackground 3s infinite; /* Set infinite to loop indefinitely */
     animation-fill-mode: forwards;
 }
@@ -28,8 +28,7 @@
     width: 35em;
     height: 22em;
     border-radius: 12px;
-    border: solid 1px #2E3A32;
-    box-shadow: 1px 1px 25px #808180;
+    box-shadow: 1px 1px 25px #000000;
 }
 
 .h3
@@ -234,8 +233,7 @@
     transform: scale(1.1); 
     transition: transform 1.5s ease-in-out;
     border-radius: 12px;
-    border: solid 1px #2E3A32;
-    box-shadow: 1px 1px 25px #525954;
+    box-shadow: 1px 1px 55px #131413;
 }
 
 .h3-types
