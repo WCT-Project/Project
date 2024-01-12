@@ -31,6 +31,8 @@ const Register = () => {
         setRefConfirmPassword(e.target.value)
         if (RegPassword && RegConfirmPassword !== RegConfirmPassword) {
             setIsPasswordUnmatch(true);
+        } else {
+            setIsPasswordUnmatch(false);
         }
     };
 
