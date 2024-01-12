@@ -183,7 +183,9 @@ const Register = () => {
                   </div>
                 )}
                 {!isPasswordUnmatch && isCannotLogin && (
-                  <p className="" style={{fontSize: '12px'}}>Email already exist.</p>
+                  <div className="confirm-pass-center">
+                    <span className="confirm-password" style={{fontSize: '12px'}}><b>Email already exist.</b></span>
+                  </div>
                 )}
   
                 <button type="submit" className="login__buttonlogin button-login">Register</button>
