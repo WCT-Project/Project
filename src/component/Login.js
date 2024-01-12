@@ -98,7 +98,7 @@ const LoginHandling = () => {
 
               {isWrongLogin && (
                 <div>
-                  <span className='wrong-password'>Wrong Password</span>
+                  <span className='wrong-password'><b>Wrong Password</b></span>
                 </div>
               )}
 

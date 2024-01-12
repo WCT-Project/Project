@@ -152,7 +152,10 @@ img {
 }
 .wrong-password
 {
-  color: rgb(250, 250, 250);
+  color: rgb(255, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .login__buttonlogin:hover {

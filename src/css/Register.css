@@ -135,6 +135,15 @@ img {
   top: -12px;
   font-size: .813rem;
 }
+.confirm-password
+{
+  color: red;
+  justify-content: center;
+}
+.confirm-pass-center
+{
+  text-align: center;
+}
 
 /*=============== BREAKPOINTS ===============*/
 /* For medium devices */
