@@ -29,7 +29,7 @@ const Register = () => {
     const handleRegPasswordChange = (e) => setRegPassword(e.target.value);
     const handleRegConfirmPasswordChange = (e) => {
         setRefConfirmPassword(e.target.value)
-        if (RegPassword && RegConfirmPassword !== RegConfirmPassword) {
+        if (RegConfirmPassword !== RegConfirmPassword) {
             setIsPasswordUnmatch(true);
         } else {
             setIsPasswordUnmatch(false);
@@ -61,6 +61,8 @@ const Register = () => {
         if (RegPassword !== RegConfirmPassword) {
           setIsPasswordUnmatch(true);
           return;
+        } else {
+          setIsPasswordUnmatch(false);
         }
         var response  = await register(RegUserName, RegEmail, RegPassword);
         
@@ -180,7 +182,7 @@ const Register = () => {
                     <span className="confirm-password" style={{fontSize: '12px'}}><b>Password and Confirm-Password Unmatched</b></span>
                   </div>
                 )}
-                {isCannotLogin && (
+                {!isPasswordUnmatch && isCannotLogin && (
                   <p className="" style={{fontSize: '12px'}}>Email already exist.</p>
                 )}
   
